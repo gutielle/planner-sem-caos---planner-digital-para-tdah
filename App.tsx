@@ -27,7 +27,7 @@ const Header: React.FC = () => (
 );
 
 // Você pode substituir estas imagens por suas próprias imagens locais
-// Coloque suas imagens na pasta public/images/planner/ com proporção 3:2 (600x400px)
+// Coloque suas imagens na pasta public/images/planner/ com proporção 2667:2000 (2667x2000px)
 const plannerImages = [
   { src: "/images/planner/planner-daily.jpg", alt: "Visualização da página de planejamento diário do Planner Sem Caos." },
   { src: "/images/planner/planner-weekly.jpg", alt: "Visualização da página de planejamento semanal do Planner Sem Caos." },
@@ -76,13 +76,16 @@ const Hero: React.FC = () => {
       <div className="mt-8 relative">
         <div className="overflow-x-auto hide-scrollbar snap-x snap-mandatory flex gap-4 px-4 sm:px-6">
           {plannerImages.map((image, index) => (
-            <img
+            <div 
               key={index}
               ref={el => { imageRefs.current[index] = el; }}
-              src={image.src}
-              alt={image.alt}
-              className="w-11/12 md:w-4/5 flex-shrink-0 rounded-lg shadow-lg snap-center"
-            />
+              className="w-11/12 md:w-4/5 flex-shrink-0 rounded-lg shadow-lg snap-center overflow-hidden aspect-[2667/2000]">
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="w-full h-full object-cover"
+              />
+            </div>
           ))}
         </div>
         <button 
