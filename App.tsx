@@ -26,15 +26,17 @@ const Header: React.FC = () => (
   </header>
 );
 
+// Você pode substituir estas imagens por suas próprias imagens locais
+// Coloque suas imagens na pasta public/images/planner/ com proporção 3:2 (600x400px)
 const plannerImages = [
-  { src: "https://picsum.photos/seed/planner-daily/600/400", alt: "Visualização da página de planejamento diário do Planner Sem Caos." },
-  { src: "https://picsum.photos/seed/planner-weekly/600/400", alt: "Visualização da página de planejamento semanal do Planner Sem Caos." },
-  { src: "https://picsum.photos/seed/planner-habits/600/400", alt: "Visualização do rastreador de hábitos do Planner Sem Caos." },
-  { src: "https://picsum.photos/seed/planner-braindump/600/400", alt: "Visualização da seção de despejo de ideias (brain dump) do Planner Sem Caos." },
-  { src: "https://picsum.photos/seed/planner-goals/600/400", alt: "Visualização da seção de metas do Planner Sem Caos." },
-  { src: "https://picsum.photos/seed/planner-finances/600/400", alt: "Visualização do controle financeiro do Planner Sem Caos." },
-  { src: "https://picsum.photos/seed/planner-monthly/600/400", alt: "Visualização da página de planejamento mensal do Planner Sem Caos." },
-  { src: "https://picsum.photos/seed/planner-notes/600/400", alt: "Visualização da seção de anotações livres do Planner Sem Caos." },
+  { src: "/images/planner/planner-daily.jpg", alt: "Visualização da página de planejamento diário do Planner Sem Caos." },
+  { src: "/images/planner/planner-weekly.jpg", alt: "Visualização da página de planejamento semanal do Planner Sem Caos." },
+  { src: "/images/planner/planner-habits.jpg", alt: "Visualização do rastreador de hábitos do Planner Sem Caos." },
+  { src: "/images/planner/planner-braindump.jpg", alt: "Visualização da seção de despejo de ideias (brain dump) do Planner Sem Caos." },
+  { src: "/images/planner/planner-goals.jpg", alt: "Visualização da seção de metas do Planner Sem Caos." },
+  { src: "/images/planner/planner-finances.jpg", alt: "Visualização do controle financeiro do Planner Sem Caos." },
+  { src: "/images/planner/planner-monthly.jpg", alt: "Visualização da página de planejamento mensal do Planner Sem Caos." },
+  { src: "/images/planner/planner-notes.jpg", alt: "Visualização da seção de anotações livres do Planner Sem Caos." },
 ];
 
 const Hero: React.FC = () => {
