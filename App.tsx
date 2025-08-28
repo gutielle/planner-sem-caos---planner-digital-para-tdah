@@ -41,7 +41,7 @@ const plannerImages = [
 
 const Hero: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const imageRefs = useRef<(HTMLImageElement | null)[]>([]);
+  const imageRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const scrollToImage = (index: number) => {
     imageRefs.current[index]?.scrollIntoView({
