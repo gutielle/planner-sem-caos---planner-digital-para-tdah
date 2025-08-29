@@ -122,6 +122,7 @@ const PromoPricing: React.FC = () => (
         href="https://pay.hotmart.com/B101638408P"
         target="_blank"
         rel="noopener noreferrer"
+        data-cta="CTA 01"
         className="block bg-[#FF4757] text-white font-bold text-lg uppercase w-full py-4 px-10 rounded-md shadow-lg transform hover:scale-[1.02] transition-transform duration-300 ease-in-out"
       >
         GARANTIR MEU PLANNER
@@ -260,6 +261,7 @@ const Pricing: React.FC = () => (
         href="https://pay.hotmart.com/B101638408P"
         target="_blank"
         rel="noopener noreferrer"
+        data-cta="CTA 02"
         className="block bg-[#FF4757] text-white font-bold text-lg uppercase w-full py-4 px-10 rounded-md shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out"
       >
         GARANTIR MEU PLANNER
