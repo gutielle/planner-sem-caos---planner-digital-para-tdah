@@ -194,7 +194,7 @@ const WhoAmI: React.FC = () => (
     <div className="flex flex-col md:flex-row items-center gap-8">
       <div className="md:w-1/3 flex justify-center">
         <img 
-          src="https://picsum.photos/seed/creator/200/200" 
+          src="/images/creator/profile.jpg" 
           alt="Mariana Costa, educadora TDAH e criadora do Planner Sem Caos." 
           className="rounded-full w-40 h-40 object-cover shadow-lg"
         />
