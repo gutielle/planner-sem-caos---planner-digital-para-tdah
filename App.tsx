@@ -203,7 +203,7 @@ const WhoAmI: React.FC = () => (
       </div>
       <div className="md:w-2/3 text-center md:text-left text-[#333333]">
         <p className="text-base sm:text-lg mb-4">
-          "Olá! Eu sou a Mariana, educadora especializada em TDAH. Por anos, minha mesa era um mar de post-its e cadernos pela metade. Como uma adulta com TDAH, a organização tradicional nunca funcionou para mim. Era frustrante e me fazia sentir inadequada."
+          "Olá! Eu sou a Juliana, educadora especializada em TDAH. Por anos, minha mesa era um mar de post-its e cadernos pela metade. Como uma adulta com TDAH, a organização tradicional nunca funcionou para mim. Era frustrante e me fazia sentir inadequada."
         </p>
         <p className="text-base sm:text-lg mb-4">
           "Sou dedicada a criar ferramentas e recursos que ajudem pessoas neurodivergentes a prosperar. Sabemos, por experiência própria, como pode ser desafiador encontrar sistemas que realmente funcionem, e estou aqui para mudar isso."
@@ -211,7 +211,7 @@ const WhoAmI: React.FC = () => (
         <p className="text-base sm:text-lg">
           "Criei o <strong>Planner Sem Caos</strong> porque precisava de uma ferramenta que se adaptasse ao meu cérebro, e não o contrário. Minha esperança é que ele te ajude a encontrar a mesma clareza e controle que ele me trouxe."
         </p>
-        <p className="font-semibold text-right mt-4 text-[#FF4757]">- Mariana C.</p>
+        <p className="font-semibold text-right mt-4 text-[#FF4757]">- Juliana C.</p>
       </div>
     </div>
   </section>
