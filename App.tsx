@@ -29,6 +29,7 @@ const Header: React.FC = () => (
 // Você pode substituir estas imagens por suas próprias imagens locais
 // Coloque suas imagens na pasta public/images/planner/ com proporção 2667:2000 (2667x2000px)
 const plannerImages = [
+  { src: "/images/planner/planner-cover.jpg", alt: "Capa do Planner Sem Caos - ferramenta de organização para TDAH." },
   { src: "/images/planner/planner-daily.jpg", alt: "Visualização da página de planejamento diário do Planner Sem Caos." },
   { src: "/images/planner/planner-weekly.jpg", alt: "Visualização da página de planejamento semanal do Planner Sem Caos." },
   { src: "/images/planner/planner-habits.jpg", alt: "Visualização do rastreador de hábitos do Planner Sem Caos." },
