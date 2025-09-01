@@ -64,7 +64,7 @@ const Hero: React.FC = () => {
     <section className="text-center pt-8 sm:pt-12 pb-6 sm:pb-8">
       <div className="px-4 sm:px-6">
         <h1 className="text-4xl sm:text-5xl font-black text-[#FF4757] leading-tight">
-          Finalmente, um Planner Feito para o Cérebro Adulto com TDAH.
+          Finalmente, um Planner Feito para o Cérebro com TDAH.
         </h1>
         <p className="mt-4 text-base sm:text-lg text-[#666666]">
           Pare de lutar contra seu cérebro e comece a trabalhar com ele. Nosso planner digital ajuda você a domar o caos, gerenciar prioridades e finalmente concluir suas tarefas.
