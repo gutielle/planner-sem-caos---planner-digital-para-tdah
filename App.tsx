@@ -1,5 +1,6 @@
 
 import React, { useState, useRef } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 // --- Reusable Icon Component ---
 const CheckIcon: React.FC<{ className?: string }> = ({ className = "w-6 h-6" }) => (
@@ -354,6 +355,7 @@ function App() {
         <Footer />
       </main>
       <div className="text-center text-xs text-white/50 py-4">&nbsp;</div>
+      <SpeedInsights />
     </div>
   );
 }
