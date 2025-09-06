@@ -116,7 +116,7 @@ const PromoPricing: React.FC = () => (
         <span className="text-2xl font-semibold line-through text-gray-400">R$ 98,00</span>
         <span className="text-4xl sm:text-5xl font-black text-[#333333] ml-2">R$ 19<span className="text-2xl sm:text-3xl align-top">,90</span></span>
       </div>
-      <p className="text-sm text-gray-600 -mt-4 mb-6">Planner com mais de 50 páginas</p>
+      <p className="text-sm text-gray-600 -mt-4 mb-6">Planner com mais de 150 páginas</p>
       <ul className="space-y-3 text-left mb-8">
         <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0" /><span>Planner em PDF para Impressão</span></li>
         <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0" /><span>Acesso a todas as futuras atualizações</span></li>
@@ -132,6 +132,8 @@ const PromoPricing: React.FC = () => (
     </div>
   </section>
 );
+
+
 
 
 const Features: React.FC = () => (
@@ -254,7 +256,7 @@ const Pricing: React.FC = () => (
         <span className="text-2xl font-semibold line-through text-gray-400">R$ 98,00</span>
         <span className="text-4xl sm:text-5xl font-black text-[#333333] ml-2">R$ 19<span className="text-2xl sm:text-3xl align-top">,90</span></span>
       </div>
-      <p className="text-sm text-gray-600 -mt-4 mb-6">Planner com mais de 50 páginas</p>
+      <p className="text-sm text-gray-600 -mt-4 mb-6">Planner com mais de 150 páginas</p>
       <ul className="space-y-3 text-left mb-8">
         <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0" /><span>Planner em PDF para Impressão</span></li>
         <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0" /><span>Acesso a todas as futuras atualizações</span></li>
@@ -346,7 +348,7 @@ function App() {
         <div className="bg-white">
           <Hero />
           <PromoPricing />
-          <Features />
+      <Features />
           <Testimonial />
           <WhoAmI />
           <WhyICreated />
