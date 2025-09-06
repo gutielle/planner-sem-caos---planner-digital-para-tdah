@@ -122,7 +122,7 @@ const PromoPricing: React.FC = () => (
         <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0" /><span>Acesso a todas as futuras atualizações</span></li>
       </ul>
       <a 
-        href="https://pay.hotmart.com/B101638408P"
+        href="https://pay.hotmart.com/B101638408P?checkoutMode=10"
         target="_blank"
         rel="noopener noreferrer"
         className="block bg-[#FF4757] text-white font-bold text-lg uppercase w-full py-4 px-10 rounded-md shadow-lg transform hover:scale-[1.02] transition-transform duration-300 ease-in-out"
@@ -262,7 +262,7 @@ const Pricing: React.FC = () => (
         <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0" /><span>Acesso a todas as futuras atualizações</span></li>
       </ul>
       <a 
-        href="https://pay.hotmart.com/B101638408P"
+        href="https://pay.hotmart.com/B101638408P?checkoutMode=10"
         target="_blank"
         rel="noopener noreferrer"
         className="block bg-[#FF4757] text-white font-bold text-lg uppercase w-full py-4 px-10 rounded-md shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out"
