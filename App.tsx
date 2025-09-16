@@ -33,6 +33,13 @@ const plannerImages = [
 ];
 
 const Hero: React.FC = () => {
+  const scrollToPricing = () => {
+    const pricingSection = document.getElementById('pricing');
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="text-center pt-8 sm:pt-12 pb-6 sm:pb-8">
       <div className="px-4 sm:px-6">
@@ -444,6 +451,157 @@ function App() {
           <ScienceBasedSection />
 
       <Features />
+          
+          {/* Galeria de Imagens do Planner */}
+          <section className="bg-white py-12 px-4 sm:px-6">
+            <div className="max-w-6xl mx-auto text-center">
+              <h2 className="text-3xl font-bold text-[#333333] mb-4">Veja o que tem dentro do seu Planner</h2>
+               <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+                 Explore algumas páginas cuidadosamente desenvolvidas para organizar sua rotina e potencializar sua produtividade.
+               </p>
+              
+              <div className="overflow-x-auto pb-4">
+                <div className="flex space-x-6 min-w-max px-4">
+                   <div className="flex-shrink-0 w-80 bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                     <img 
+                       src="/images/inside-product/check in-de-saude-mental.jpg" 
+                       alt="Check In de Saúde Mental" 
+                       className="w-full h-96 object-contain bg-white"
+                     />
+                     <div className="p-4">
+                       <h3 className="font-bold text-lg text-[#333333]">Check In de Saúde Mental</h3>
+                     </div>
+                   </div>
+                   
+                   <div className="flex-shrink-0 w-80 bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                     <img 
+                       src="/images/inside-product/como-priorizar-sua-vida.jpg" 
+                       alt="Como Priorizar Sua Vida" 
+                       className="w-full h-96 object-contain bg-white"
+                     />
+                     <div className="p-4">
+                       <h3 className="font-bold text-lg text-[#333333]">Como Priorizar Sua Vida</h3>
+                     </div>
+                   </div>
+                   
+                   <div className="flex-shrink-0 w-80 bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                     <img 
+                       src="/images/inside-product/controle-de-medicacao.jpg" 
+                       alt="Controle de Medicação" 
+                       className="w-full h-96 object-contain bg-white"
+                     />
+                     <div className="p-4">
+                       <h3 className="font-bold text-lg text-[#333333]">Controle de Medicação</h3>
+                     </div>
+                   </div>
+                   
+                   <div className="flex-shrink-0 w-80 bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                     <img 
+                       src="/images/inside-product/desafio-do-labirinto-TDAH.jpg" 
+                       alt="Desafio do Labirinto TDAH" 
+                       className="w-full h-96 object-contain bg-white"
+                     />
+                     <div className="p-4">
+                       <h3 className="font-bold text-lg text-[#333333]">Desafio do Labirinto TDAH</h3>
+                     </div>
+                   </div>
+                   
+                   <div className="flex-shrink-0 w-80 bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                     <img 
+                       src="/images/inside-product/minha-jornada-alimentar.jpg" 
+                       alt="Minha Jornada Alimentar" 
+                       className="w-full h-96 object-contain bg-white"
+                     />
+                     <div className="p-4">
+                       <h3 className="font-bold text-lg text-[#333333]">Minha Jornada Alimentar</h3>
+                     </div>
+                   </div>
+                   
+                   <div className="flex-shrink-0 w-80 bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                     <img 
+                       src="/images/inside-product/mude-sua-mente-mude-sua-vida.jpg" 
+                       alt="Mude Sua Mente Mude Sua Vida" 
+                       className="w-full h-96 object-contain bg-white"
+                     />
+                     <div className="p-4">
+                       <h3 className="font-bold text-lg text-[#333333]">Mude Sua Mente Mude Sua Vida</h3>
+                     </div>
+                   </div>
+                   
+                   <div className="flex-shrink-0 w-80 bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                     <img 
+                       src="/images/inside-product/planner-diario-do-escritorio.jpg" 
+                       alt="Planner Diário do Escritório" 
+                       className="w-full h-96 object-contain bg-white"
+                     />
+                     <div className="p-4">
+                       <h3 className="font-bold text-lg text-[#333333]">Planner Diário do Escritório</h3>
+                     </div>
+                   </div>
+                   
+                   <div className="flex-shrink-0 w-80 bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                     <img 
+                       src="/images/inside-product/rastreador-de-habitos.jpg" 
+                       alt="Rastreador de Hábitos" 
+                       className="w-full h-96 object-contain bg-white"
+                     />
+                     <div className="p-4">
+                       <h3 className="font-bold text-lg text-[#333333]">Rastreador de Hábitos</h3>
+                     </div>
+                   </div>
+                   
+                   <div className="flex-shrink-0 w-80 bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                     <img 
+                       src="/images/inside-product/rastreador-de-pagamentos-de-dividas.jpg" 
+                       alt="Rastreador de Pagamentos de Dívidas" 
+                       className="w-full h-96 object-contain bg-white"
+                     />
+                     <div className="p-4">
+                       <h3 className="font-bold text-lg text-[#333333]">Rastreador de Pagamentos de Dívidas</h3>
+                     </div>
+                   </div>
+                   
+                   <div className="flex-shrink-0 w-80 bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                     <img 
+                       src="/images/inside-product/rastreador-de-senhas.jpg" 
+                       alt="Rastreador de Senhas" 
+                       className="w-full h-96 object-contain bg-white"
+                     />
+                     <div className="p-4">
+                       <h3 className="font-bold text-lg text-[#333333]">Rastreador de Senhas</h3>
+                     </div>
+                   </div>
+                   
+                   <div className="flex-shrink-0 w-80 bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                     <img 
+                       src="/images/inside-product/registro-de-medidas.jpg" 
+                       alt="Registro de Medidas" 
+                       className="w-full h-96 object-contain bg-white"
+                     />
+                     <div className="p-4">
+                       <h3 className="font-bold text-lg text-[#333333]">Registro de Medidas</h3>
+                     </div>
+                   </div>
+                   
+                   <div className="flex-shrink-0 w-80 bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                     <img 
+                       src="/images/inside-product/visao-geral-da-poupanca.jpg" 
+                       alt="Visão Geral da Poupança" 
+                       className="w-full h-96 object-contain bg-white"
+                     />
+                     <div className="p-4">
+                       <h3 className="font-bold text-lg text-[#333333]">Visão Geral da Poupança</h3>
+                     </div>
+                   </div>
+                </div>
+              </div>
+              
+              <div className="mt-8 text-center">
+                <p className="text-gray-600 text-sm">← Deslize para ver mais páginas →</p>
+              </div>
+            </div>
+          </section>
+          
           <Bonus />
         </div>
         <Pricing />
@@ -453,112 +611,6 @@ function App() {
     
         </div>
         <FAQ />
-        
-        {/* Galeria de Imagens do Planner */}
-        <section className="bg-white py-12 px-4 sm:px-6">
-          <div className="max-w-6xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-[#333333] mb-4">Veja o que tem dentro do seu Planner</h2>
-             <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-               Explore algumas páginas cuidadosamente desenvolvidas para organizar sua rotina e potencializar sua produtividade.
-             </p>
-            
-            <div className="overflow-x-auto pb-4">
-              <div className="flex space-x-6 min-w-max px-4">
-                 <div className="flex-shrink-0 w-80 bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                   <img 
-                     src="/images/inside-product/rastreador-de-pagamentos-de-dividas.jpg" 
-                     alt="Rastreador de Pagamentos de Dívidas" 
-                     className="w-full h-96 object-contain bg-white"
-                   />
-                   <div className="p-4">
-                      <h3 className="font-bold text-lg text-[#333333]">Rastreador de Pagamentos de Dívidas</h3>
-                    </div>
-                 </div>
-                 
-                 <div className="flex-shrink-0 w-80 bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                   <img 
-                      src="/images/inside-product/controle-de-medicacao.jpg" 
-                      alt="Controle de Medicação" 
-                      className="w-full h-96 object-contain bg-white"
-                    />
-                   <div className="p-4">
-                      <h3 className="font-bold text-lg text-[#333333]">Controle de Medicação</h3>
-                    </div>
-                 </div>
-                 
-                 <div className="flex-shrink-0 w-80 bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                   <img 
-                      src="/images/inside-product/desafio-do-labirinto-TDAH.jpg" 
-                      alt="Desafio do Labirinto TDAH" 
-                      className="w-full h-96 object-contain bg-white"
-                    />
-                   <div className="p-4">
-                      <h3 className="font-bold text-lg text-[#333333]">Desafio do Labirinto TDAH</h3>
-                    </div>
-                 </div>
-                 
-                 <div className="flex-shrink-0 w-80 bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                   <img 
-                      src="/images/inside-product/minha-jornada-alimentar.jpg" 
-                      alt="Minha Jornada Alimentar" 
-                      className="w-full h-96 object-contain bg-white"
-                    />
-                   <div className="p-4">
-                      <h3 className="font-bold text-lg text-[#333333]">Minha Jornada Alimentar</h3>
-                    </div>
-                 </div>
-                 
-                 <div className="flex-shrink-0 w-80 bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                   <img 
-                      src="/images/inside-product/planner-diario-do-escritorio.jpg" 
-                      alt="Planner Diário do Escritório" 
-                      className="w-full h-96 object-contain bg-white"
-                    />
-                   <div className="p-4">
-                      <h3 className="font-bold text-lg text-[#333333]">Planner Diário do Escritório</h3>
-                    </div>
-                 </div>
-                 
-                 <div className="flex-shrink-0 w-80 bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                   <img 
-                      src="/images/inside-product/rastreador-de-senhas.jpg" 
-                      alt="Rastreador de Senhas" 
-                      className="w-full h-96 object-contain bg-white"
-                    />
-                   <div className="p-4">
-                      <h3 className="font-bold text-lg text-[#333333]">Rastreador de Senhas</h3>
-                    </div>
-                 </div>
-                 
-                 <div className="flex-shrink-0 w-80 bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                   <img 
-                      src="/images/inside-product/registro-de-medidas.jpg" 
-                      alt="Registro de Medidas" 
-                      className="w-full h-96 object-contain bg-white"
-                    />
-                   <div className="p-4">
-                      <h3 className="font-bold text-lg text-[#333333]">Registro de Medidas</h3>
-                    </div>
-                 </div>
-                 
-                 <div className="flex-shrink-0 w-80 bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                   <img 
-                      src="/images/inside-product/visao-geral-da-poupanca.jpg" 
-                      alt="Visão Geral da Poupança" 
-                      className="w-full h-96 object-contain bg-white"
-                    />
-                   <div className="p-4">
-                      <h3 className="font-bold text-lg text-[#333333]">Visão Geral da Poupança</h3>
-                    </div>
-                 </div>
-               </div>
-            </div>
-            
-            <div className="mt-6 text-sm text-gray-500">
-              ← Deslize para ver mais páginas →
-            </div>
-          </div>
-        </section>
         
         <Pricing />
         <Footer />
