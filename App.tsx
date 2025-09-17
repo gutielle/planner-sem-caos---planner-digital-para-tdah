@@ -12,6 +12,8 @@ const CheckIcon: React.FC<{ className?: string }> = ({ className = "w-6 h-6" }) 
 
 
 
+
+
 // --- Page Section Components ---
 
 const Header: React.FC = () => (
@@ -300,6 +302,7 @@ const Pricing: React.FC = () => (
         </div>
         <p className="text-sm text-gray-600 -mt-4 mb-6">Planner com mais de 170 páginas</p>
         <ul className="space-y-3 text-left mb-8">
+          <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0" /><span>Acesse e preencha de onde quiser, no celular, tablet ou computador</span></li>
           <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0" /><span>Planner em PDF para Impressão</span></li>
           <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0" /><span>Layouts Flexíveis e Não Datados</span></li>
           <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0" /><span>+170 Maneiras de fazer as coisas acontecerem</span></li>
@@ -329,6 +332,7 @@ const Pricing: React.FC = () => (
         </div>
         <p className="text-sm text-gray-600 -mt-4 mb-6">Planner com mais de 170 páginas</p>
         <ul className="space-y-3 text-left mb-6">
+          <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0" /><span>Acesse e preencha de onde quiser, no celular, tablet ou computador</span></li>
           <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0" /><span>Planner em PDF para Impressão</span></li>
           <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0" /><span>Layouts Flexíveis e Não Datados</span></li>
           <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0" /><span>+170 Maneiras de fazer as coisas acontecerem</span></li>
@@ -616,6 +620,7 @@ function App() {
         <Footer />
       </main>
       <div className="text-center text-xs text-white/50 py-4">&nbsp;</div>
+
       <SpeedInsights />
       <Analytics />
     </div>
