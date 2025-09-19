@@ -287,50 +287,36 @@ const WhoAmI: React.FC = () => (
 
 const Pricing: React.FC = () => (
   <section id="pricing" className="bg-[#FF4757] text-white text-center px-4 sm:px-6 py-10 sm:py-12">
-    <h2 className="text-2xl sm:text-3xl font-bold mb-4">Escolha Seu Plano</h2>
+    <h2 className="text-2xl sm:text-3xl font-bold mb-4">Adquira Seu Planner</h2>
     <p className="mt-2 mb-8 text-base sm:text-lg max-w-lg mx-auto">
       Invista em você. Adquira a ferramenta definitiva que está ajudando centenas de adultos com TDAH a transformar o caos em clareza.
     </p>
     
-    <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-      {/* Plano Básico */}
-      <div className="bg-white text-[#333333] rounded-lg shadow-xl p-8 border border-gray-200">
-        <h3 className="text-2xl font-bold text-[#FF4757] mb-2">BÁSICO</h3>
-        <p className="text-lg mb-4">Pagamento único. Sem assinaturas.</p>
-        <div className="my-6">
-          <span className="text-4xl sm:text-5xl font-black text-[#333333]">R$ 24<span className="text-2xl sm:text-3xl align-top">,90</span></span>
-        </div>
-        <p className="text-sm text-gray-600 -mt-4 mb-6">Planner com mais de 170 páginas</p>
-        <ul className="space-y-3 text-left mb-8">
-          <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0" /><span>Acesse e preencha de onde quiser, no celular, tablet ou computador</span></li>
-          <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0" /><span>Planner em PDF para Impressão</span></li>
-          <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0" /><span>Layouts Flexíveis e Não Datados</span></li>
-          <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0" /><span>+170 Maneiras de fazer as coisas acontecerem</span></li>
-          <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0" /><span>Imprima quantas vezes quiser</span></li>
-          <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0" /><span>Atualizações grátis para sempre</span></li>
-        </ul>
-        <a 
-          href="https://pay.hotmart.com/B101638408P?off=s0940n0k&checkoutMode=10"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block bg-[#FF4757] text-white font-bold text-lg uppercase w-full py-4 px-6 rounded-md shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out"
-        >
-          ESCOLHER BÁSICO
-        </a>
-      </div>
-
+    <div className="flex justify-center max-w-md mx-auto">
       {/* Plano Premium */}
-      <div className="bg-white text-[#333333] rounded-lg shadow-xl p-8 border-2 border-[#FF4757] relative">
+      <div className="bg-white text-[#333333] rounded-lg shadow-xl p-8 border-2 border-[#FF4757] relative w-full">
         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-[#FF4757] text-white px-4 py-1 rounded-full text-sm font-bold">
           MAIS POPULAR
         </div>
+        
+        {/* Limited Time Badge */}
+        <div className="absolute -top-3 -right-3 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold transform rotate-12">
+          65% OFF
+        </div>
+        
         <h3 className="text-2xl font-bold text-[#FF4757] mb-2">PREMIUM</h3>
-        <p className="text-lg mb-4">Pagamento único. Sem assinaturas.</p>
+        
+        <p className="text-lg mb-2">Pagamento único. Sem assinaturas.</p>
+        
+
+        
         <div className="my-6">
           <span className="text-2xl font-semibold line-through text-gray-400">R$ 98,00</span>
-          <span className="text-4xl sm:text-5xl font-black text-[#333333] ml-2">R$ 34<span className="text-2xl sm:text-3xl align-top">,90</span></span>
+          <span className="text-4xl sm:text-5xl font-black text-[#333333] ml-2">R$ 29<span className="text-2xl sm:text-3xl align-top">,90</span></span>
         </div>
-        <p className="text-sm text-gray-600 -mt-4 mb-6">Planner com mais de 170 páginas</p>
+        <p className="text-sm text-gray-600 -mt-4 mb-4">Planner com mais de 170 páginas</p>
+        
+
         <ul className="space-y-3 text-left mb-6">
           <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0" /><span>Acesse e preencha de onde quiser, no celular, tablet ou computador</span></li>
           <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0" /><span>Planner em PDF para Impressão</span></li>
@@ -365,14 +351,22 @@ const Pricing: React.FC = () => (
              </li>
            </ul>
         </div>
+
+        
         <a 
           href="https://pay.hotmart.com/B101638408P?off=eoj8cz98&checkoutMode=10"
           target="_blank"
           rel="noopener noreferrer"
-          className="block bg-[#FF4757] text-white font-bold text-lg uppercase w-full py-4 px-6 rounded-md shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out"
+          className="block bg-[#FF4757] text-white font-bold text-lg uppercase w-full py-4 px-6 rounded-md shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out animate-pulse"
         >
-          ESCOLHER PREMIUM
+          GARANTIR MEU PLANNER
         </a>
+        
+        {/* Risk Reversal */}
+        <div className="mt-4 text-center">
+          <p className="text-xs text-gray-500">🛡️ Garantia de 7 dias ou seu dinheiro de volta</p>
+          <p className="text-xs text-gray-400 mt-1">Compra 100% segura e protegida</p>
+        </div>
       </div>
     </div>
   </section>
