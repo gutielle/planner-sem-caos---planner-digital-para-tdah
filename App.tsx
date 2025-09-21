@@ -370,7 +370,7 @@ const Pricing: React.FC = () => (
         
         {/* Risk Reversal */}
         <div className="mt-4 text-center">
-          <p className="text-xs text-gray-500">🛡️ Garantia de 7 dias ou seu dinheiro de volta</p>
+          <p className="text-xs text-gray-500">🛡️ Garantia de 30 dias ou seu dinheiro de volta</p>
           <p className="text-xs text-gray-400 mt-1">Compra 100% segura e protegida</p>
         </div>
       </div>
@@ -413,7 +413,7 @@ const FAQ: React.FC = () => (
           E se não funcionar para mim?
         </h3>
         <p className="mt-1 text-sm sm:text-base text-[#666666]">
-          Temos uma garantia de satisfação de 7 dias. Se você sentir que o planner não atendeu às suas expectativas, basta nos contatar dentro de 7 dias para um reembolso total, sem complicações.
+          Temos uma garantia de satisfação de 30 dias. Se você sentir que o planner não atendeu às suas expectativas, basta nos contatar dentro de 30 dias para um reembolso total, sem complicações.
         </p>
       </div>
       <div className="border-t pt-6">
