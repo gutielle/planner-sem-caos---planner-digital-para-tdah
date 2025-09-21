@@ -79,6 +79,7 @@ const ScienceBasedSection: React.FC = () => (
           src="/images/planner/planner-habits.jpg" 
           alt="Páginas do planner mostrando conteúdo baseado em ciência sobre TDAH"
           className="w-full h-auto"
+          loading="lazy"
         />
       </div>
       <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -89,6 +90,7 @@ const ScienceBasedSection: React.FC = () => (
            src="/images/planner/planner-daily.jpg" 
            alt="Páginas do planner mostrando modelos únicos criados para TDAH"
            className="w-full h-auto"
+           loading="lazy"
          />
        </div>
        <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -99,6 +101,7 @@ const ScienceBasedSection: React.FC = () => (
             src="/images/planner/planner-weekly.jpg" 
             alt="Páginas do planner com dicas e coaching para TDAH"
             className="w-full h-auto"
+            loading="lazy"
           />
         </div>
         <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -109,6 +112,7 @@ const ScienceBasedSection: React.FC = () => (
             src="/images/planner/planner-braindump.jpg" 
             alt="Páginas do planner mostrando design flexível e personalizável"
             className="w-full h-auto"
+            loading="lazy"
           />
         </div>
       </div>
@@ -204,6 +208,7 @@ const Bonus: React.FC = () => (
                 src={bonus.image}
                 alt={`Imagem ilustrativa do bônus: ${bonus.headline}`}
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
             <div className="mt-3 flex justify-center">
@@ -265,6 +270,7 @@ const WhoAmI: React.FC = () => (
           src="/images/creator/profile.jpg" 
           alt="Mariana Costa, educadora TDAH e criadora do Planner Sem Caos." 
           className="rounded-full w-40 h-40 object-cover shadow-lg"
+          loading="lazy"
         />
       </div>
       <div className="md:w-2/3 text-center md:text-left text-[#333333]">
