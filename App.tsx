@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { SpeedInsights } from '@vercel/speed-insights/react';
 import { Analytics } from '@vercel/analytics/react';
 
 // --- Reusable Icon Component ---
@@ -79,7 +78,6 @@ const ScienceBasedSection: React.FC = () => (
           src="/images/planner/planner-habits.jpg" 
           alt="Páginas do planner mostrando conteúdo baseado em ciência sobre TDAH"
           className="w-full h-auto"
-          loading="lazy"
         />
       </div>
       <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -90,7 +88,6 @@ const ScienceBasedSection: React.FC = () => (
            src="/images/planner/planner-daily.jpg" 
            alt="Páginas do planner mostrando modelos únicos criados para TDAH"
            className="w-full h-auto"
-           loading="lazy"
          />
        </div>
        <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -101,7 +98,6 @@ const ScienceBasedSection: React.FC = () => (
             src="/images/planner/planner-weekly.jpg" 
             alt="Páginas do planner com dicas e coaching para TDAH"
             className="w-full h-auto"
-            loading="lazy"
           />
         </div>
         <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -112,7 +108,6 @@ const ScienceBasedSection: React.FC = () => (
             src="/images/planner/planner-braindump.jpg" 
             alt="Páginas do planner mostrando design flexível e personalizável"
             className="w-full h-auto"
-            loading="lazy"
           />
         </div>
       </div>
@@ -160,35 +155,35 @@ const Features: React.FC = () => (
 
 const bonusItems = [
   {
-    headline: "Checklist de Limpeza Imprimível",
+    headline: "Organize, Respire e Brilhe: Checklist de Limpeza",
     description: "Esse checklist vai deixar sua rotina de limpeza mais organizada, leve e eficiente, economizando tempo e mantendo sua casa impecável.",
     image: "/images/bonus/cleaning-checklist.jpg",
     aspectRatio: "2000/1414", // landscape
     pages: "+3 Páginas"
   },
   {
-      headline: "Mapa das Profundezas Ocultas",
+      headline: "O Segredo Escondido Dentro de Você",
       description: "Esse guia visual ajuda a identificar sentimentos escondidos, entender melhor as próprias emoções e dar os primeiros passos rumo ao autoconhecimento e bem-estar.",
       image: "/images/bonus/emotional-iceberg.jpg",
       aspectRatio: "1414/2000", // portrait
       pages: "+29 Páginas"
     },
   {
-      headline: "Workbook \"Navegando pelas Emoções\"",
+      headline: "Coleção Premium de Exercícios Emocionais",
       description: "Esse workbook é um companheiro de jornada, ajudando você a desenvolver mais autoconsciência, aceitação e bem-estar emocional.",
       image: "/images/bonus/emotions-workbook.jpg",
       aspectRatio: "2000/1414", // landscape
       pages: "+10 Páginas"
     },
   {
-      headline: "TDAH Aventuras",
+      headline: "Exercícios Prontos para Explorar o TDAH",
       description: "Este guia foi criado para guiar você em exercícios e atividades que ajudam a explorar o TDAH de forma mais profunda, promovendo autoconhecimento, organização e crescimento pessoal.",
       image: "/images/bonus/tdah-adventures.jpg",
       aspectRatio: "1414/2000", // portrait
       pages: "+26 Páginas"
     },
     {
-      headline: "Rastreador de Sintomas do TDAH",
+      headline: "Do Caos à Consciência: Diário de Sintomas",
       description: "Com ele, você poderá preencher diariamente seus sintomas e, ao final do mês, ter uma visão clara do seu progresso e dos pontos que merecem mais atenção.",
       image: "/images/bonus/symptom-tracker.jpg",
       aspectRatio: "2000/1414", // landscape
@@ -208,7 +203,6 @@ const Bonus: React.FC = () => (
                 src={bonus.image}
                 alt={`Imagem ilustrativa do bônus: ${bonus.headline}`}
                 className="w-full h-full object-cover"
-                loading="lazy"
               />
             </div>
             <div className="mt-3 flex justify-center">
@@ -270,7 +264,6 @@ const WhoAmI: React.FC = () => (
           src="/images/creator/profile.jpg" 
           alt="Mariana Costa, educadora TDAH e criadora do Planner Sem Caos." 
           className="rounded-full w-40 h-40 object-cover shadow-lg"
-          loading="lazy"
         />
       </div>
       <div className="md:w-2/3 text-center md:text-left text-[#333333]">
@@ -337,23 +330,23 @@ const Pricing: React.FC = () => (
           <ul className="space-y-2 text-sm text-left">
              <li className="flex items-center">
                <CheckIcon className="w-4 h-4 mr-2 text-[#FF4757] flex-shrink-0" />
-               <span>Checklist de Limpeza Imprimível</span>
+               <span>Organize, Respire e Brilhe: Checklist de Limpeza</span>
              </li>
              <li className="flex items-center">
                <CheckIcon className="w-4 h-4 mr-2 text-[#FF4757] flex-shrink-0" />
-               <span>Mapa das Profundezas Ocultas</span>
+               <span>O Segredo Escondido Dentro de Você</span>
              </li>
              <li className="flex items-center">
                <CheckIcon className="w-4 h-4 mr-2 text-[#FF4757] flex-shrink-0" />
-               <span>Workbook "Navegando pelas Emoções"</span>
+               <span>Coleção Premium de Exercícios Emocionais</span>
              </li>
              <li className="flex items-center">
                <CheckIcon className="w-4 h-4 mr-2 text-[#FF4757] flex-shrink-0" />
-               <span>TDAH Aventuras</span>
+               <span>Exercícios Prontos para Explorar o TDAH</span>
              </li>
              <li className="flex items-center">
                <CheckIcon className="w-4 h-4 mr-2 text-[#FF4757] flex-shrink-0" />
-               <span>Rastreador de Sintomas do TDAH</span>
+               <span>Do Caos à Consciência: Diário de Sintomas</span>
              </li>
            </ul>
         </div>
@@ -641,7 +634,6 @@ function App() {
       <div className="text-center text-xs text-white/50 py-4">&nbsp;</div>
 
       <WhatsAppButton />
-      <SpeedInsights />
       <Analytics />
     </div>
   );
