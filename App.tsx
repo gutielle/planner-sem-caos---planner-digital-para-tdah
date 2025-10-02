@@ -282,6 +282,18 @@ const WhoAmI: React.FC = () => (
 
 
 
+// Validity notice with clean, subtle styling and micro-interaction
+const ValidityNotice: React.FC = () => (
+  <div className="inline-flex items-center justify-center gap-2 bg-white border border-gray-200 rounded-md p-3 shadow-sm mx-auto">
+    <svg className="w-4 h-4 text-[#FF4757] animate-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="9" strokeWidth="2" />
+      <path d="M12 7v5l3 3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+    <span className="text-xs font-bold text-[#FF4757] tracking-wide uppercase">BÔNUS LIMITADO</span>
+    <span className="text-xs text-gray-600">Válido até hoje às 23h59</span>
+  </div>
+);
+
 const Pricing: React.FC = () => (
   <section id="pricing" className="bg-[#FF4757] text-white text-center px-4 sm:px-6 py-10 sm:py-12">
     <h2 className="text-2xl sm:text-3xl font-bold mb-4">Adquira Seu Planner</h2>
