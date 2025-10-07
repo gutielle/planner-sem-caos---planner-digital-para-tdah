@@ -9,10 +9,6 @@ const CheckIcon: React.FC<{ className?: string }> = ({ className = "w-6 h-6" }) 
   </svg>
 );
 
-
-
-
-
 // --- Page Section Components ---
 
 const Header: React.FC = () => (
@@ -316,6 +312,12 @@ const Pricing: React.FC = () => (
         <h3 className="text-2xl font-bold text-[#FF4757] mb-2">PREMIUM</h3>
         
         <p className="text-lg mb-2">Pagamento único. Sem assinaturas.</p>
+        <img
+          src="/images/cover/cover-ebook.jpg"
+          alt="Capa do eBook Planner Sem Caos"
+          className="w-full max-w-[240px] mx-auto rounded-md shadow-sm my-4"
+          loading="lazy"
+        />
         
 
         
