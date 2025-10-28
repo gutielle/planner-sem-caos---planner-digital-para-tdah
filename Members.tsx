@@ -15,7 +15,7 @@ export default function Members() {
           <section aria-labelledby="downloads" className="space-y-6">
             <h2 id="downloads" className="sr-only">Downloads e Acesso</h2>
 
-            <div className="grid gap-6 sm:grid-cols-2">
+            <div className="grid gap-8 sm:grid-cols-2">
               {/* Planner Sem Caos (Digital) */}
               <article className="rounded-lg border border-gray-200 bg-white p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <h3 className="text-xl font-bold text-[#FF4757]">Planner Sem Caos (Digital)</h3>
@@ -56,7 +56,7 @@ export default function Members() {
             </div>
           </section>
 
-          <section className="mt-10">
+          <section className="mt-24">
             <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-lg">
               <h3 className="text-lg font-bold text-[#FF4757]">Precisa de ajuda com o acesso?</h3>
               <p className="mt-2 text-sm text-gray-600">
