@@ -4,6 +4,7 @@ export default {
     "./index.html",
     "./App.tsx",
     "./index.tsx",
+    "./Members.tsx",
   ],
   theme: {
     extend: {
