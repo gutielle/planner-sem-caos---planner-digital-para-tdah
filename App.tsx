@@ -293,9 +293,18 @@ const ValidityNotice: React.FC = () => (
 const Pricing: React.FC = () => (
   <section id="pricing" className="bg-[#FF4757] text-white text-center px-4 sm:px-6 py-10 sm:py-12">
     <h2 className="text-2xl sm:text-3xl font-bold mb-4">Adquira Seu Planner</h2>
-    <p className="mt-2 mb-8 text-base sm:text-lg max-w-lg mx-auto">
-      Invista em você. Adquira a ferramenta definitiva que está ajudando centenas de adultos com TDAH a transformar o caos em clareza.
-    </p>
+    <div className="mt-2 mb-8 text-base sm:text-lg max-w-lg mx-auto space-y-4">
+      <p className="text-xl sm:text-2xl font-bold">Se Você Continuar Ignorando os Sinais...</p>
+      <p className="text-lg sm:text-xl font-semibold">...a oportunidade acabará sumindo.</p>
+      <p>A vida está o tempo todo te enviando sinais — chances de agir, momentos para agarrar, lições para aprender. Mas se você ficar esperando, ficar hesitando, essas janelas vão se fechar. Quanto mais você ignora os sinais, mais difícil se torna avançar.</p>
+      <p>Você sabe que os sinais estão lá, te impulsionando a agir.</p>
+      <p>Então, por que não dar o passo agora, antes que seja tarde demais?</p>
+      <p>Não espere até que o arrependimento seja sua única companhia. Se você está pronto para começar a agir de acordo com os sinais e transformar sua vida...</p>
+      <p>Adquira o Planner Sem Caos para TDAH hoje e junte-se aos campeões!</p>
+      <p>Mais de 800 pessoas já se beneficiaram de nossos livros e publicações.</p>
+      <p>Você terá todas as diretrizes para se tornar disciplinado, inteligente e organizado, e dar todos os passos necessários para mudar sua vida. Um atalho para o crescimento!</p>
+      <p>É um sinal, e é a sua hora de evoluir.</p>
+    </div>
     
     <div className="flex justify-center max-w-md mx-auto">
       {/* Plano Premium */}
@@ -324,7 +333,7 @@ const Pricing: React.FC = () => (
         
         <div className="my-6">
           <span className="text-2xl font-semibold line-through text-gray-400">R$ 98,00</span>
-          <span className="text-4xl sm:text-5xl font-black text-[#333333] ml-2">R$ 24<span className="text-2xl sm:text-3xl align-top">,90</span></span>
+          <span className="text-4xl sm:text-5xl font-black text-[#333333] ml-2">R$ 29<span className="text-2xl sm:text-3xl align-top">,90</span></span>
         </div>
         <p className="text-sm text-gray-600 -mt-4 mb-4">Planner com mais de 170 páginas</p>
         
@@ -371,7 +380,7 @@ const Pricing: React.FC = () => (
 
         
         <a 
-          href="https://pay.hotmart.com/B101638408P?off=s0940n0k&checkoutMode=10"
+          href="https://pay.hotmart.com/B101638408P?off=eoj8cz98&checkoutMode=10"
           target="_blank"
           rel="noopener noreferrer"
           className="block bg-[#FF4757] text-white font-bold text-lg uppercase w-full py-4 px-6 rounded-md shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out animate-pulse"
@@ -475,7 +484,7 @@ const WhatsAppButton: React.FC = () => (
   </a>
 );
 
-function App() {
+function App({ showBlackFridayImages = false }: { showBlackFridayImages?: boolean }) {
   return (
     <div className="min-h-screen bg-[#7B68EE] font-sans text-[#333333] antialiased">
       <Header />
@@ -485,8 +494,42 @@ function App() {
           <ScienceBasedSection />
 
       <Features />
+      {showBlackFridayImages && (
+          <section className="px-4 sm:px-6 py-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="rounded-lg overflow-hidden shadow-lg">
+                <img
+                  src="/images/black-friday/00.jpg"
+                  alt="Capa do Planner Sem Caos - ferramenta de organização para TDAH."
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <div className="rounded-lg overflow-hidden shadow-lg">
+                <img
+                  src="/images/black-friday/01.jpg"
+                  alt="Visualização da página de planejamento diário do Planner Sem Caos."
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <div className="rounded-lg overflow-hidden shadow-lg">
+                <img
+                  src="/images/black-friday/02.jpg"
+                  alt="Visualização do rastreador de hábitos do Planner Sem Caos."
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+          </section>
+        )}
           
-          {/* Galeria de Imagens do Planner */}
+          
+          
+          <Bonus />
+        </div>
+        <Pricing />
+        <div className="bg-white">
+          <Testimonial />
+          {/* Galeria de Imagens do Planner (movida abaixo de Feedbacks) */}
           <section className="bg-white py-12 px-4 sm:px-6">
             <div className="max-w-6xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-[#333333] mb-4">Veja o que tem dentro do seu Planner</h2>
@@ -635,12 +678,6 @@ function App() {
               </div>
             </div>
           </section>
-          
-          <Bonus />
-        </div>
-        <Pricing />
-        <div className="bg-white">
-          <Testimonial />
           <WhoAmI />
     
         </div>
