@@ -2,6 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import BlackFriday from './BlackFriday';
 import Members from './Members';
 import './index.css';
 import { injectSpeedInsights } from '@vercel/speed-insights';
@@ -20,7 +21,8 @@ root.render(
   <React.StrictMode>
     <HashRouter>
       <Routes>
-        <Route path="/" element={<App />} />
+        <Route path="/" element={<App showBlackFridayImages />} />
+        <Route path="/black-friday" element={<BlackFriday />} />
         <Route path="/members" element={<Members />} />
       </Routes>
     </HashRouter>
