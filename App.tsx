@@ -292,7 +292,7 @@ const ValidityNotice: React.FC = () => (
 
 const Pricing: React.FC = () => (
   <section id="pricing" className="bg-[#FF4757] text-white text-center px-4 sm:px-6 py-10 sm:py-12">
-    <h2 className="text-2xl sm:text-3xl font-bold mb-4">Adquira Seu Planner</h2>
+    <h2 className="text-2xl sm:text-3xl font-bold mb-4">Adquira Seu Planner 👇</h2>
     <div className="mt-2 mb-8 text-base sm:text-lg max-w-lg mx-auto space-y-4">
       <p className="text-xl sm:text-2xl font-bold">Se Você Continuar Ignorando os Sinais...</p>
       <p className="text-lg sm:text-xl font-semibold">...a oportunidade acabará sumindo.</p>
