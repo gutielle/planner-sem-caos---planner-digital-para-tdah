@@ -291,19 +291,14 @@ const ValidityNotice: React.FC = () => (
 );
 
 const Pricing: React.FC = () => (
-  <section id="pricing" className="bg-[#FF4757] text-white text-center px-4 sm:px-6 py-10 sm:py-12">
+  <section id="pricing" className="text-white text-center px-4 sm:px-6 py-10 sm:py-12 bg-gradient-to-b from-black via-[#0e0e0e] to-[#1f2937] border-t border-[#FF4757]/20">
     <h2 className="text-2xl sm:text-3xl font-bold mb-4">Adquira Seu Planner 👇</h2>
     <div className="mt-2 mb-8 text-base sm:text-lg max-w-lg mx-auto space-y-4">
-      <p className="text-xl sm:text-2xl font-bold">Se Você Continuar Ignorando os Sinais...</p>
-      <p className="text-lg sm:text-xl font-semibold">...a oportunidade acabará sumindo.</p>
-      <p>A vida está o tempo todo te enviando sinais — chances de agir, momentos para agarrar, lições para aprender. Mas se você ficar esperando, ficar hesitando, essas janelas vão se fechar. Quanto mais você ignora os sinais, mais difícil se torna avançar.</p>
-      <p>Você sabe que os sinais estão lá, te impulsionando a agir.</p>
-      <p>Então, por que não dar o passo agora, antes que seja tarde demais?</p>
-      <p>Não espere até que o arrependimento seja sua única companhia. Se você está pronto para começar a agir de acordo com os sinais e transformar sua vida...</p>
-      <p>Adquira o Planner Sem Caos para TDAH hoje e junte-se aos campeões!</p>
-      <p>Mais de 800 pessoas já se beneficiaram de nossos livros e publicações.</p>
+      <p>Você passou o ano inteiro tentando.</p>
+      <p>Agora você pode facilitar — e gastar menos por isso.</p>
+      <p>Nesta Black Friday, dê a si mesmo a ferramenta certa.</p>
       <p>Você terá todas as diretrizes para se tornar disciplinado, inteligente e organizado, e dar todos os passos necessários para mudar sua vida. Um atalho para o crescimento!</p>
-      <p>É um sinal, e é a sua hora de evoluir.</p>
+      <p>O Planner Sem Caos com o menor preço do ano. Aproveite enquanto está ativo.</p>
     </div>
     
     <div className="flex justify-center max-w-md mx-auto">
@@ -318,7 +313,6 @@ const Pricing: React.FC = () => (
           65% OFF
         </div>
         
-        <h3 className="text-2xl font-bold text-[#FF4757] mb-2">PREMIUM</h3>
         
         <p className="text-lg mb-2">Pagamento único. Sem assinaturas.</p>
           <img 
