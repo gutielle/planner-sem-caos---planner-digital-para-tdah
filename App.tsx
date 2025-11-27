@@ -327,7 +327,7 @@ const Pricing: React.FC = () => (
         
         <div className="my-6">
           <span className="text-2xl font-semibold line-through text-gray-400">R$ 98,00</span>
-          <span className="text-4xl sm:text-5xl font-black text-[#333333] ml-2">R$ 24<span className="text-2xl sm:text-3xl align-top">,90</span></span>
+          <span className="text-4xl sm:text-5xl font-black text-[#333333] ml-2">R$ 29<span className="text-2xl sm:text-3xl align-top">,90</span></span>
         </div>
         <p className="text-sm text-gray-600 -mt-4 mb-4">Planner com mais de 170 páginas</p>
         
@@ -374,7 +374,7 @@ const Pricing: React.FC = () => (
 
         
         <a 
-          href="https://pay.hotmart.com/B101638408P?off=s0940n0k&checkoutMode=10"
+          href="https://pay.hotmart.com/B101638408P?off=eoj8cz98&checkoutMode=10"
           target="_blank"
           rel="noopener noreferrer"
           className="block bg-[#FF4757] text-white font-bold text-lg uppercase w-full py-4 px-6 rounded-md shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out animate-pulse"
@@ -505,22 +505,15 @@ function App({ showBlackFridayImages = false }: { showBlackFridayImages?: boolea
                   className="w-full h-auto object-cover"
                 />
               </div>
-              <div className="rounded-lg overflow-hidden shadow-lg">
-                <img
-                  src="/images/black-friday/02.jpg"
-                  alt="Visualização do rastreador de hábitos do Planner Sem Caos."
-                  className="w-full h-auto object-cover"
-                />
-              </div>
             </div>
           </section>
         )}
           
           
           
+          <Pricing />
           <Bonus />
         </div>
-        <Pricing />
         <div className="bg-white">
           <Testimonial />
           <section className="bg-white py-12 px-4 sm:px-6">
