@@ -540,8 +540,7 @@ function App({ showBlackFridayImages = false }: { showBlackFridayImages?: boolea
         <Footer />
       </main>
       <div className="text-center text-xs text-white/50 py-4">&nbsp;</div>
-
-      <WhatsAppButton />
+      
       <Analytics />
     </div>
   );
