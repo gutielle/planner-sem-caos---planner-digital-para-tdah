@@ -291,14 +291,14 @@ const ValidityNotice: React.FC = () => (
 );
 
 const Pricing: React.FC = () => (
-  <section id="pricing" className="text-white text-center px-4 sm:px-6 py-10 sm:py-12 bg-gradient-to-b from-black via-[#0e0e0e] to-[#1f2937] border-t border-[#FF4757]/20">
+  <section id="pricing" className="text-white text-center px-4 sm:px-6 py-10 sm:py-12 bg-[#FF4757]">
     <h2 className="text-2xl sm:text-3xl font-bold mb-4">Adquira Seu Planner 👇</h2>
     <div className="mt-2 mb-8 text-base sm:text-lg max-w-lg mx-auto space-y-4">
-      <p>Você passou o ano inteiro tentando.</p>
-      <p>Agora você pode facilitar — e gastar menos por isso.</p>
-      <p>Nesta Black Friday, dê a si mesmo a ferramenta certa.</p>
+      <p>Você passou 2025 inteiro tentando.</p>
+      <p>Recomeçar não precisa ser doloroso - Pode ser leve, visual e no seu ritmo - mesmo com TDAH</p>
+      <p>Neste Ano Novo, torne esse recomeço mais acessível.</p>
       <p>Você terá todas as diretrizes para se tornar disciplinado, inteligente e organizado, e dar todos os passos necessários para mudar sua vida. Um atalho para o crescimento!</p>
-      <p>O Planner Sem Caos com o menor preço do ano. Aproveite enquanto está ativo.</p>
+      <p>O Planner Sem Caos com valor especial. Aproveite enquanto está ativo.</p>
     </div>
     
     <div className="flex justify-center max-w-md mx-auto">
