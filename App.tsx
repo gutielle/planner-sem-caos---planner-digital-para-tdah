@@ -372,9 +372,40 @@ const Pricing: React.FC = () => (
            </div>
         </div>
 
-        
         <a 
-          href="https://pay.hotmart.com/B101638408P?off=eoj8cz98&checkoutMode=10"
+          href={(function() {
+            const base = "https://pay.hotmart.com/B101638408P?off=eoj8cz98&checkoutMode=10";
+            if (typeof window === "undefined") return base;
+            let url: URL;
+            try {
+              url = new URL(base);
+            } catch {
+              return base;
+            }
+            const allowed = new Set([
+              "utm_source",
+              "utm_medium",
+              "utm_campaign",
+              "utm_term",
+              "utm_content",
+              "utm_id",
+              "gclid",
+              "fbclid",
+              "wbraid",
+              "gbraid",
+              "msclkid",
+              "src"
+            ]);
+            const incoming = new URLSearchParams(window.location.search);
+            incoming.forEach((value, key) => {
+              if (allowed.has(key) || key.startsWith("utm_")) {
+                if (!url.searchParams.has(key)) {
+                  url.searchParams.set(key, value);
+                }
+              }
+            });
+            return url.toString();
+          })()}
           target="_blank"
           rel="noopener noreferrer"
           className="block bg-[#FF4757] text-white font-bold text-lg uppercase w-full py-4 px-6 rounded-md shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out animate-pulse"
