@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
       <div className="mt-8 px-4 sm:px-6">
         <div className="max-w-2xl mx-auto aspect-[2667/2000]">
           <img
-            src="/images/planner/2667.jpg"
+            src="/images/planner/hero.gif"
             alt="Capa do Planner Sem Caos - ferramenta de organização para TDAH"
             className="w-full h-full object-cover rounded-xl shadow-xl"
           />
