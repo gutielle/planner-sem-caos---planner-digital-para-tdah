@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
           <img
             src="/images/planner/hero.gif"
             alt="Capa do Planner Sem Caos - ferramenta de organização para TDAH"
-            className="w-full h-full object-cover rounded-xl shadow-xl"
+            className="w-full h-full object-cover rounded-xl shadow-xl border-4 border-black"
           />
         </div>
       </div>
