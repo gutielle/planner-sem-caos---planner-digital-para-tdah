@@ -1,5 +1,5 @@
 
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import { Analytics } from '@vercel/analytics/react';
 
 // --- Reusable Icon Component ---
@@ -23,14 +23,6 @@ const Header: React.FC = () => (
 // Coloque suas imagens na pasta public/images/planner/ com proporção 2667:2000 (2667x2000px)
 
 const Hero: React.FC = () => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.playbackRate = 1.5;
-    }
-  }, []);
-
   const scrollToPricing = () => {
     const pricingSection = document.getElementById('pricing');
     if (pricingSection) {
@@ -50,17 +42,11 @@ const Hero: React.FC = () => {
       </div>
       <div className="mt-8 px-4 sm:px-6">
         <div className="max-w-2xl mx-auto aspect-[2667/2000]">
-          <video
-            ref={videoRef}
-            src="/images/videos/video-planner2.mov"
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover rounded-xl shadow-xl border-4 border-black"
-          >
-            Seu navegador não suporta a tag de vídeo.
-          </video>
+          <img
+            src="/images/planner/2667.jpg"
+            alt="Capa do Planner Sem Caos - ferramenta de organização para TDAH"
+            className="w-full h-full object-cover rounded-xl shadow-xl"
+          />
         </div>
       </div>
     </section>
