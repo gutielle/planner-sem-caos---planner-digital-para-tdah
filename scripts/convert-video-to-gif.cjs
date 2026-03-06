@@ -11,7 +11,7 @@ const outputPath = path.join(__dirname, '../public/images/planner/hero.gif');
 console.log(`Converting ${inputPath} to ${outputPath}...`);
 
 ffmpeg(inputPath)
-  .outputOption('-vf', 'fps=10,scale=640:-1:flags=lanczos')
+  .outputOption('-vf', 'setpts=PTS/1.5,fps=10,scale=640:-1:flags=lanczos')
   .on('end', () => {
     console.log('Conversion finished successfully');
   })
