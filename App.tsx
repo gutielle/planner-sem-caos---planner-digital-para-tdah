@@ -508,9 +508,8 @@ function App({ showBlackFridayImages = false }: { showBlackFridayImages?: boolea
             </div>
           </section>
         )}
-          
-          
-          
+
+
           <Pricing />
           <Bonus />
         </div>
