@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Analytics } from '@vercel/analytics/react';
 
 // --- Reusable Icon Component ---
@@ -12,24 +12,25 @@ const CheckIcon: React.FC<{ className?: string }> = ({ className = "w-6 h-6" }) 
 // --- Page Section Components ---
 
 const Header: React.FC = () => (
-  <header className="py-5 px-4 sm:px-6">
+  <header className="py-5 px-4 sm:px-6 bg-creme-papel">
     <div className="text-center">
-      <a href="#" className="text-white text-2xl font-bold tracking-wider">Planner Sem Caos</a>
+      <a href="#" className="text-verde-musgo text-2xl font-bold tracking-wider">Planner Sem Caos</a>
     </div>
   </header>
 );
 
 // Você pode substituir estas imagens por suas próprias imagens locais
 // Coloque suas imagens na pasta public/images/planner/ com proporção 2667:2000 (2667x2000px)
-const plannerImages = [
-  { src: "/images/planner/planner-cover.jpg", alt: "Capa do Planner Sem Caos - ferramenta de organização para TDAH." },
-  { src: "/images/planner/planner-daily.jpg", alt: "Visualização da página de planejamento diário do Planner Sem Caos." },
-  { src: "/images/planner/planner-weekly.jpg", alt: "Visualização da página de planejamento semanal do Planner Sem Caos." },
-  { src: "/images/planner/planner-habits.jpg", alt: "Visualização do rastreador de hábitos do Planner Sem Caos." },
-  { src: "/images/planner/planner-braindump.jpg", alt: "Visualização da seção de despejo de ideias (brain dump) do Planner Sem Caos." },
-];
 
 const Hero: React.FC = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 1.5;
+    }
+  }, []);
+
   const scrollToPricing = () => {
     const pricingSection = document.getElementById('pricing');
     if (pricingSection) {
@@ -38,22 +39,28 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section className="text-center pt-8 sm:pt-12 pb-6 sm:pb-8">
+    <section className="text-center pt-8 sm:pt-12 pb-6 sm:pb-8 bg-creme-papel">
       <div className="px-4 sm:px-6">
-        <h1 className="text-4xl sm:text-5xl font-black text-[#FF4757] leading-tight">
+        <h1 className="text-4xl sm:text-5xl font-black text-verde-musgo leading-tight">
           Finalmente, um Planner Feito para o Cérebro com TDAH.
         </h1>
-        <p className="mt-4 text-base sm:text-lg text-[#666666]">
+        <p className="mt-4 text-base sm:text-lg text-verde-musgo/80">
           Pare de lutar contra seu cérebro e comece a trabalhar com ele. Nosso planner digital ajuda você a domar o caos, gerenciar prioridades e finalmente concluir suas tarefas.
         </p>
       </div>
       <div className="mt-8 px-4 sm:px-6">
         <div className="max-w-2xl mx-auto aspect-[2667/2000]">
-          <img
-            src="/images/planner/planner-cover.jpg"
-            alt="Capa do Planner Sem Caos - ferramenta de organização para TDAH."
-            className="w-full h-full object-cover"
-          />
+          <video
+            ref={videoRef}
+            src="/images/videos/video-planner2.mov"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover rounded-xl shadow-xl border-4 border-black"
+          >
+            Seu navegador não suporta a tag de vídeo.
+          </video>
         </div>
       </div>
     </section>
@@ -61,49 +68,49 @@ const Hero: React.FC = () => {
   };
 
 const ScienceBasedSection: React.FC = () => (
-  <section className="px-4 sm:px-6 py-12 sm:py-16 bg-white">
+  <section className="px-4 sm:px-6 py-12 sm:py-16 bg-rosa-aquarela">
     <div className="max-w-4xl mx-auto text-center">
-      <h2 className="text-3xl sm:text-4xl font-bold text-[#333333] mb-6">
+      <h2 className="text-3xl sm:text-4xl font-bold text-verde-musgo mb-6">
         Nossos planners são modernos e baseados em ciência
       </h2>
-      <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+      <p className="text-lg text-verde-musgo/80 mb-8 max-w-3xl mx-auto leading-relaxed">
         Descubra como funciona o seu cérebro com TDAH, com páginas que explicam hábitos inconscientes e neurobiologia, além de dicas de leitura para se aprofundar
       </p>
       <div className="max-w-md mx-auto mb-8">
         <img 
-          src="/images/planner/planner-habits.jpg" 
+          src="/images/planner/respiracao-caixa.jpg" 
           alt="Páginas do planner mostrando conteúdo baseado em ciência sobre TDAH"
-          className="w-full h-auto"
+          className="w-full h-auto rounded-lg shadow-md"
         />
       </div>
-      <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+      <p className="text-lg text-verde-musgo/80 mb-8 max-w-3xl mx-auto leading-relaxed">
         Modelos inéditos para TDAH que eu criei, como a Flor de Lótus do Hiperfoco, a Regra de Poupança 10&10, o Planner de Foco para Ligações, o Carrinho de Compras de 24 Horas, o Checklist de Compras por Impulso, o Planejamento DIV/CON, as Pétalas do Poder da Produtividade e muito mais!
       </p>
       <div className="max-w-md mx-auto mb-8">
          <img 
-           src="/images/planner/planner-daily.jpg" 
+           src="/images/planner/metas.jpg" 
            alt="Páginas do planner mostrando modelos únicos criados para TDAH"
-           className="w-full h-auto"
+           className="w-full h-auto rounded-lg shadow-md"
          />
        </div>
-       <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+       <p className="text-lg text-verde-musgo/80 mb-8 max-w-3xl mx-auto leading-relaxed">
          Dicas, conselhos e coaching para te ajudar a focar nos seus pontos fortes e criar hábitos e rotinas que cuidem de você e funcionem junto com o seu cérebro, em vez de contra ele.
        </p>
        <div className="max-w-md mx-auto mb-8">
           <img 
-            src="/images/planner/planner-weekly.jpg" 
+            src="/images/planner/compras.jpg" 
             alt="Páginas do planner com dicas e coaching para TDAH"
-            className="w-full h-auto"
+            className="w-full h-auto rounded-lg shadow-md"
           />
         </div>
-        <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-lg text-verde-musgo/80 mb-8 max-w-3xl mx-auto leading-relaxed">
           Design e estrutura únicos que te dão total flexibilidade para personalizar o planner totalmente para a sua vida, rotina e trabalho.
         </p>
         <div className="max-w-md mx-auto">
           <img 
-            src="/images/planner/planner-braindump.jpg" 
+            src="/images/planner/priorizar.jpg" 
             alt="Páginas do planner mostrando design flexível e personalizável"
-            className="w-full h-auto"
+            className="w-full h-auto rounded-lg shadow-md"
           />
         </div>
       </div>
@@ -116,33 +123,33 @@ const ScienceBasedSection: React.FC = () => (
 
 
 const Features: React.FC = () => (
-    <section className="px-4 sm:px-6 py-8 sm:py-10">
-      <h2 className="text-2xl sm:text-3xl font-bold text-[#FF4757] mb-8 text-center">Projetado para Ajudar Você a Prosperar</h2>
+    <section className="px-4 sm:px-6 py-8 sm:py-10 bg-creme-papel">
+      <h2 className="text-2xl sm:text-3xl font-bold text-verde-musgo mb-8 text-center">Projetado para Ajudar Você a Prosperar</h2>
       <div className="grid md:grid-cols-2 gap-x-8 gap-y-6">
         <div>
-          <h3 className="text-xl font-semibold text-[#FF4757] mb-3">O Que Vem Dentro</h3>
-          <ul className="space-y-2 text-[#333333]">
-             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0 mt-1" /><span>Planejamentos diários, semanais e mensais – organize tudo de forma simples e clara</span></li>
-             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0 mt-1" /><span>Listas e trackers práticos – nunca mais esqueça o que é importante</span></li>
-             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0 mt-1" /><span>Hábitos saudáveis – defina e alcance suas metas com orientação passo a passo</span></li>
-             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0 mt-1" /><span>Autocuidado em foco – trackers para cuidar de você todos os dias</span></li>
-             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0 mt-1" /><span>Controle financeiro fácil – acompanhe orçamento e finanças sem stress</span></li>
-             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0 mt-1" /><span>Casa em ordem – ferramentas para organizar o dia a dia do lar</span></li>
-             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0 mt-1" /><span>Mente tranquila – técnicas baseadas em evidências para acalmar e focar</span></li>
-             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0 mt-1" /><span>E muito mais!!</span></li>
+          <h3 className="text-xl font-semibold text-terracota mb-3">O Que Vem Dentro</h3>
+          <ul className="space-y-2 text-verde-musgo">
+             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0 mt-1" /><span>Planejamentos diários, semanais e mensais – organize tudo de forma simples e clara</span></li>
+             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0 mt-1" /><span>Listas e trackers práticos – nunca mais esqueça o que é importante</span></li>
+             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0 mt-1" /><span>Hábitos saudáveis – defina e alcance suas metas com orientação passo a passo</span></li>
+             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0 mt-1" /><span>Autocuidado em foco – trackers para cuidar de você todos os dias</span></li>
+             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0 mt-1" /><span>Controle financeiro fácil – acompanhe orçamento e finanças sem stress</span></li>
+             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0 mt-1" /><span>Casa em ordem – ferramentas para organizar o dia a dia do lar</span></li>
+             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0 mt-1" /><span>Mente tranquila – técnicas baseadas em evidências para acalmar e focar</span></li>
+             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0 mt-1" /><span>E muito mais!!</span></li>
           </ul>
         </div>
         <div>
-          <h3 className="text-xl font-semibold text-[#FF4757] mb-3">Benefícios para o Seu Cérebro</h3>
-          <ul className="space-y-2 text-[#333333]">
-             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0 mt-1" /><span>Reduza a sobrecarga com uma estrutura clara.</span></li>
-             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0 mt-1" /><span>Mantenha-se motivado com rastreadores visuais.</span></li>
-             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0 mt-1" /><span>Abrace a criatividade com espaço para anotações.</span></li>
-             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0 mt-1" /><span>Crie rotinas que realmente funcionam.</span></li>
-             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0 mt-1" /><span>Melhore o foco com técnicas adaptadas ao TDAH.</span></li>
-             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0 mt-1" /><span>Diminua a ansiedade com planejamento estruturado.</span></li>
-             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0 mt-1" /><span>Aumente a autoestima celebrando pequenas conquistas.</span></li>
-             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0 mt-1" /><span>Desenvolva autodisciplina com ferramentas práticas.</span></li>
+          <h3 className="text-xl font-semibold text-terracota mb-3">Benefícios para o Seu Cérebro</h3>
+          <ul className="space-y-2 text-verde-musgo">
+             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0 mt-1" /><span>Reduza a sobrecarga com uma estrutura clara.</span></li>
+             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0 mt-1" /><span>Mantenha-se motivado com rastreadores visuais.</span></li>
+             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0 mt-1" /><span>Abrace a criatividade com espaço para anotações.</span></li>
+             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0 mt-1" /><span>Crie rotinas que realmente funcionam.</span></li>
+             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0 mt-1" /><span>Melhore o foco com técnicas adaptadas ao TDAH.</span></li>
+             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0 mt-1" /><span>Diminua a ansiedade com planejamento estruturado.</span></li>
+             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0 mt-1" /><span>Aumente a autoestima celebrando pequenas conquistas.</span></li>
+             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0 mt-1" /><span>Desenvolva autodisciplina com ferramentas práticas.</span></li>
           </ul>
         </div>
       </div>
@@ -188,8 +195,8 @@ const bonusItems = [
   ];
 
 const Bonus: React.FC = () => (
-  <section className="px-4 sm:px-6 py-8 sm:py-10 bg-gray-50">
-    <h2 className="text-2xl sm:text-3xl font-bold text-[#FF4757] mb-8 text-center">Bônus Exclusivos Inclusos</h2>
+  <section className="px-4 sm:px-6 py-8 sm:py-10 bg-rosa-aquarela">
+    <h2 className="text-2xl sm:text-3xl font-bold text-verde-musgo mb-8 text-center">Bônus Exclusivos Inclusos</h2>
     <div className="space-y-8">
       {bonusItems.map((bonus, index) => (
         <div key={index} className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-6 md:gap-8`}>
@@ -202,14 +209,14 @@ const Bonus: React.FC = () => (
               />
             </div>
             <div className="mt-3 flex justify-center">
-              <span className="bg-[#FF4757] text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+              <span className="bg-terracota text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
                 {bonus.pages}
               </span>
             </div>
           </div>
           <div className="md:w-1/2 text-center md:text-left">
-            <h3 className="text-xl sm:text-2xl font-bold text-[#FF4757] mb-4">{bonus.headline}</h3>
-            <p className="text-base sm:text-lg text-[#333333] leading-relaxed">{bonus.description}</p>
+            <h3 className="text-xl sm:text-2xl font-bold text-terracota mb-4">{bonus.headline}</h3>
+            <p className="text-base sm:text-lg text-verde-musgo leading-relaxed">{bonus.description}</p>
           </div>
         </div>
       ))}
@@ -233,16 +240,16 @@ const testimonials = [
 ];
 
 const Testimonial: React.FC = () => (
-  <section className="px-4 sm:px-6 py-8 sm:py-10 bg-gray-50">
-    <h2 className="text-2xl sm:text-3xl font-bold text-[#FF4757] mb-8 text-center">A Transformação é Real</h2>
+  <section className="px-4 sm:px-6 py-8 sm:py-10 bg-creme-papel">
+    <h2 className="text-2xl sm:text-3xl font-bold text-verde-musgo mb-8 text-center">A Transformação é Real</h2>
     <div className="max-w-2xl mx-auto space-y-8">
       {testimonials.map((testimonial, index) => (
-        <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-          <p className="italic text-base sm:text-lg text-[#333333] relative">
-            <span className="text-4xl sm:text-5xl text-[#FF4757] opacity-20 absolute -top-2 -left-2 sm:-top-4 sm:-left-4 font-serif">“</span>
+        <div key={index} className="bg-rosa-aquarela p-6 rounded-lg shadow-md border border-terracota/10">
+          <p className="italic text-base sm:text-lg text-verde-musgo relative">
+            <span className="text-4xl sm:text-5xl text-terracota opacity-20 absolute -top-2 -left-2 sm:-top-4 sm:-left-4 font-serif">“</span>
             {testimonial.quote}
           </p>
-          <p className="font-semibold text-right mt-4 text-[#FF4757]">- {testimonial.author}</p>
+          <p className="font-semibold text-right mt-4 text-terracota">- {testimonial.author}</p>
         </div>
       ))}
     </div>
@@ -250,17 +257,17 @@ const Testimonial: React.FC = () => (
 );
 
 const WhoAmI: React.FC = () => (
-  <section className="px-4 sm:px-6 py-8 sm:py-10 bg-white">
-    <h2 className="text-2xl sm:text-3xl font-bold text-[#FF4757] mb-8 text-center">Uma Ferramenta Criada por Alguém que Entende</h2>
+  <section className="px-4 sm:px-6 py-8 sm:py-10 bg-creme-papel">
+    <h2 className="text-2xl sm:text-3xl font-bold text-verde-musgo mb-8 text-center">Uma Ferramenta Criada por Alguém que Entende</h2>
     <div className="flex flex-col md:flex-row items-center gap-8">
       <div className="md:w-1/3 flex justify-center">
         <img 
           src="/images/creator/profile.jpg" 
           alt="Mariana Costa, educadora TDAH e criadora do Planner Sem Caos." 
-          className="rounded-full w-40 h-40 object-cover shadow-lg"
+          className="rounded-full w-40 h-40 object-cover shadow-lg border-4 border-rosa-aquarela"
         />
       </div>
-      <div className="md:w-2/3 text-center md:text-left text-[#333333]">
+      <div className="md:w-2/3 text-center md:text-left text-verde-musgo">
         <p className="text-base sm:text-lg mb-4">
           "Olá! Eu sou a Juliana, educadora especializada em TDAH. Por anos, minha mesa era um mar de post-its e cadernos pela metade. Como uma adulta com TDAH, a organização tradicional nunca funcionou para mim. Era frustrante e me fazia sentir inadequada."
         </p>
@@ -270,7 +277,7 @@ const WhoAmI: React.FC = () => (
         <p className="text-base sm:text-lg">
           "Criei o <strong>Planner Sem Caos</strong> porque precisava de uma ferramenta que se adaptasse ao meu cérebro, e não o contrário. Minha esperança é que ele te ajude a encontrar a mesma clareza e controle que ele me trouxe."
         </p>
-        <p className="font-semibold text-right mt-4 text-[#FF4757]">- Juliana C.</p>
+        <p className="font-semibold text-right mt-4 text-terracota">- Juliana C.</p>
       </div>
     </div>
   </section>
@@ -280,20 +287,20 @@ const WhoAmI: React.FC = () => (
 
 // Validity notice with clean, subtle styling and micro-interaction
 const ValidityNotice: React.FC = () => (
-  <div className="inline-flex items-center justify-center gap-2 bg-white border border-gray-200 rounded-md p-3 shadow-sm mx-auto">
-    <svg className="w-4 h-4 text-[#FF4757] animate-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <div className="inline-flex items-center justify-center gap-2 bg-creme-papel border border-terracota/20 rounded-md p-3 shadow-sm mx-auto">
+    <svg className="w-4 h-4 text-terracota animate-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
       <circle cx="12" cy="12" r="9" strokeWidth="2" />
       <path d="M12 7v5l3 3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
-    <span className="text-xs font-bold text-[#FF4757] tracking-wide uppercase">BÔNUS LIMITADO</span>
-    <span className="text-xs text-gray-600">Válido até hoje às 23h59</span>
+    <span className="text-xs font-bold text-terracota tracking-wide uppercase">BÔNUS LIMITADO</span>
+    <span className="text-xs text-verde-musgo/60">Válido até hoje às 23h59</span>
   </div>
 );
 
 const Pricing: React.FC = () => (
-  <section id="pricing" className="text-white text-center px-4 sm:px-6 py-10 sm:py-12 bg-[#FF4757]">
-    <h2 className="text-2xl sm:text-3xl font-bold mb-4">Adquira Seu Planner 👇</h2>
-    <div className="mt-2 mb-8 text-base sm:text-lg max-w-lg mx-auto space-y-4">
+  <section id="pricing" className="text-verde-musgo text-center px-4 sm:px-6 py-10 sm:py-12 bg-creme-papel">
+    <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-verde-musgo">Adquira Seu Planner 👇</h2>
+    <div className="mt-2 mb-8 text-base sm:text-lg max-w-lg mx-auto space-y-4 text-verde-musgo/80">
       <p>Você passou 2025 inteiro tentando.</p>
       <p>Recomeçar não precisa ser doloroso - Pode ser leve, visual e no seu ritmo - mesmo com TDAH</p>
       <p>Neste Ano Novo, torne esse recomeço mais acessível.</p>
@@ -303,65 +310,64 @@ const Pricing: React.FC = () => (
     
     <div className="flex justify-center max-w-md mx-auto">
       {/* Plano Premium */}
-      <div className="bg-white text-[#333333] rounded-lg shadow-xl p-8 border-2 border-[#FF4757] relative w-full">
-        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-[#FF4757] text-white px-4 py-1 rounded-full text-sm font-bold">
+      <div className="bg-rosa-aquarela text-verde-musgo rounded-lg shadow-xl p-8 border-2 border-terracota relative w-full">
+        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-terracota text-white px-4 py-1 rounded-full text-sm font-bold">
           MAIS POPULAR
         </div>
         
         {/* Limited Time Badge */}
-        <div className="absolute -top-3 -right-3 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold transform rotate-12">
+        <div className="absolute -top-3 -right-3 bg-terracota text-white px-3 py-1 rounded-full text-xs font-bold transform rotate-12">
           65% OFF
         </div>
         
         
-        <p className="text-lg mb-2">Pagamento único. Sem assinaturas.</p>
+        <p className="text-lg mb-2 text-verde-musgo/80">Pagamento único. Sem assinaturas.</p>
           <img 
-            src="/images/cover/cover-ebook.jpg" 
+            src="/images/cover/cover2.jpg" 
             alt="Capa do eBook Planner Sem Caos"
-            className="w-full max-w-[240px] mx-auto my-4 block rounded-none shadow-none ring-0 outline-none border-0 bg-white"
-            style={{ border: 'none', outline: 'none', boxShadow: 'none' }}
+            className="w-full max-w-[240px] mx-auto my-4 block rounded-lg shadow-lg ring-4 ring-terracota/10"
             loading="lazy"
           />
         
 
         
         <div className="my-6">
-          <span className="text-2xl font-semibold line-through text-gray-400">R$ 98,00</span>
-          <span className="text-4xl sm:text-5xl font-black text-[#333333] ml-2">R$ 29<span className="text-2xl sm:text-3xl align-top">,90</span></span>
+          <span className="text-2xl font-semibold line-through text-verde-musgo/40">R$ 98,00</span>
+          <span className="text-4xl sm:text-5xl font-black text-verde-musgo ml-2">R$ 29<span className="text-2xl sm:text-3xl align-top">,90</span></span>
         </div>
-        <p className="text-sm text-gray-600 -mt-4 mb-4">Planner com mais de 170 páginas</p>
+        <p className="text-sm text-verde-musgo/60 -mt-4 mb-4">Planner com mais de 170 páginas</p>
         
 
         <ul className="space-y-3 text-left mb-6">
-          <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0" /><span>Acesse e preencha de onde quiser, no celular, tablet ou computador</span></li>
-          <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0" /><span>Planner em PDF para Impressão</span></li>
-          <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0" /><span>Layouts Flexíveis e Não Datados</span></li>
-          <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0" /><span>+170 Maneiras de fazer as coisas acontecerem</span></li>
-          <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0" /><span>Imprima quantas vezes quiser</span></li>
-          <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-[#FF4757] flex-shrink-0" /><span>Atualizações grátis para sempre</span></li>
+          <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0" /><span>Acesse e preencha de onde quiser, no celular, tablet ou computador</span></li>
+          <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0" /><span>Planner em PDF para Impressão</span></li>
+          <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0" /><span>Layouts Flexíveis e Não Datados</span></li>
+          <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0" /><span>+170 Maneiras de fazer as coisas acontecerem</span></li>
+          <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0" /><span>Imprima quantas vezes quiser</span></li>
+          <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0" /><span>Atualizações grátis para sempre</span></li>
         </ul>
         
-        <div className="bg-[#FFF5F5] border border-[#FF4757] rounded-lg p-4 mb-6">
-          <h4 className="text-lg font-bold text-[#FF4757] mb-3 text-center">🎁 BÔNUS INCLUSOS</h4>
+        <div className="bg-creme-papel border border-terracota/20 rounded-lg p-4 mb-6 shadow-inner">
+          <h4 className="text-lg font-bold text-terracota mb-3 text-center">🎁 BÔNUS INCLUSOS</h4>
           <ul className="space-y-2 text-sm text-left">
              <li className="flex items-center">
-               <CheckIcon className="w-4 h-4 mr-2 text-[#FF4757] flex-shrink-0" />
+               <CheckIcon className="w-4 h-4 mr-2 text-dourado flex-shrink-0" />
                <span>Organize, Respire e Brilhe: Checklist de Limpeza</span>
              </li>
              <li className="flex items-center">
-               <CheckIcon className="w-4 h-4 mr-2 text-[#FF4757] flex-shrink-0" />
+               <CheckIcon className="w-4 h-4 mr-2 text-dourado flex-shrink-0" />
                <span>O Segredo Escondido Dentro de Você</span>
              </li>
              <li className="flex items-center">
-               <CheckIcon className="w-4 h-4 mr-2 text-[#FF4757] flex-shrink-0" />
+               <CheckIcon className="w-4 h-4 mr-2 text-dourado flex-shrink-0" />
                <span>Coleção Premium de Exercícios Emocionais</span>
              </li>
              <li className="flex items-center">
-               <CheckIcon className="w-4 h-4 mr-2 text-[#FF4757] flex-shrink-0" />
+               <CheckIcon className="w-4 h-4 mr-2 text-dourado flex-shrink-0" />
                <span>Exercícios Prontos para Explorar o TDAH</span>
              </li>
              <li className="flex items-center">
-               <CheckIcon className="w-4 h-4 mr-2 text-[#FF4757] flex-shrink-0" />
+               <CheckIcon className="w-4 h-4 mr-2 text-dourado flex-shrink-0" />
                <span>Do Caos à Consciência: Diário de Sintomas</span>
              </li>
            </ul>
@@ -408,15 +414,15 @@ const Pricing: React.FC = () => (
           })()}
           target="_blank"
           rel="noopener noreferrer"
-          className="block bg-[#FF4757] text-white font-bold text-lg uppercase w-full py-4 px-6 rounded-md shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out animate-pulse"
+          className="block bg-terracota text-white font-bold text-lg uppercase w-full py-4 px-6 rounded-md shadow-lg transform hover:scale-105 hover:bg-pessego-suave transition-all duration-300 ease-in-out animate-pulse"
         >
           GARANTIR MEU PLANNER
         </a>
         
         {/* Risk Reversal */}
         <div className="mt-4 text-center">
-          <p className="text-xs text-gray-500">🛡️ Garantia de 30 dias ou seu dinheiro de volta</p>
-          <p className="text-xs text-gray-400 mt-1">Compra 100% segura e protegida</p>
+          <p className="text-xs text-verde-musgo/60">🛡️ Garantia de 30 dias ou seu dinheiro de volta</p>
+          <p className="text-xs text-verde-musgo/40 mt-1">Compra 100% segura e protegida</p>
         </div>
       </div>
     </div>
@@ -424,48 +430,48 @@ const Pricing: React.FC = () => (
 );
 
 const FAQ: React.FC = () => (
-  <section className="px-4 sm:px-6 py-8 sm:py-10 bg-white">
-    <h2 className="text-2xl sm:text-3xl font-bold text-[#FF4757] mb-8 text-center">
+  <section className="px-4 sm:px-6 py-8 sm:py-10 bg-rosa-aquarela">
+    <h2 className="text-2xl sm:text-3xl font-bold text-verde-musgo mb-8 text-center">
       Perguntas Frequentes
     </h2>
     <div className="max-w-2xl mx-auto space-y-6 text-left">
       <div>
-        <h3 className="font-semibold text-base sm:text-lg text-[#333333]">
+        <h3 className="font-semibold text-base sm:text-lg text-terracota">
           Como funciona o planner?
         </h3>
-        <p className="mt-1 text-sm sm:text-base text-[#666666]">
+        <p className="mt-1 text-sm sm:text-base text-verde-musgo/80">
           Você receberá um arquivo PDF de alta qualidade no tamanho A4 e A5 pronto para ser impresso em casa ou em uma gráfica. Você pode imprimir as páginas que precisar, quantas vezes quiser. Recomendamos imprimir em papel de gramatura média a alta para maior durabilidade.
         </p>
       </div>
-      <div className="border-t pt-6">
-        <h3 className="font-semibold text-base sm:text-lg text-[#333333]">
+      <div className="border-t border-terracota/10 pt-6">
+        <h3 className="font-semibold text-base sm:text-lg text-terracota">
           É um pagamento único ou uma assinatura?
         </h3>
-        <p className="mt-1 text-sm sm:text-base text-[#666666]">
+        <p className="mt-1 text-sm sm:text-base text-verde-musgo/80">
           É um pagamento 100% único! Você compra uma vez e tem acesso vitalício ao planner e a todas as futuras atualizações, sem nenhuma taxa recorrente.
         </p>
       </div>
-      <div className="border-t pt-6">
-        <h3 className="font-semibold text-base sm:text-lg text-[#333333]">
+      <div className="border-t border-terracota/10 pt-6">
+        <h3 className="font-semibold text-base sm:text-lg text-terracota">
           Como receberei o planner após a compra?
         </h3>
-        <p className="mt-1 text-sm sm:text-base text-[#666666]">
+        <p className="mt-1 text-sm sm:text-base text-verde-musgo/80">
           Imediatamente após a confirmação do pagamento, você receberá um e-mail com um link para baixar seu planner em PDF. O processo é instantâneo.
         </p>
       </div>
-      <div className="border-t pt-6">
-        <h3 className="font-semibold text-base sm:text-lg text-[#333333]">
+      <div className="border-t border-terracota/10 pt-6">
+        <h3 className="font-semibold text-base sm:text-lg text-terracota">
           E se não funcionar para mim?
         </h3>
-        <p className="mt-1 text-sm sm:text-base text-[#666666]">
+        <p className="mt-1 text-sm sm:text-base text-verde-musgo/80">
           Temos uma garantia de satisfação de 30 dias. Se você sentir que o planner não atendeu às suas expectativas, basta nos contatar dentro de 30 dias para um reembolso total, sem complicações.
         </p>
       </div>
-      <div className="border-t pt-6">
-        <h3 className="font-semibold text-base sm:text-lg text-[#333333]">
+      <div className="border-t border-terracota/10 pt-6">
+        <h3 className="font-semibold text-base sm:text-lg text-terracota">
           Preciso ter diagnóstico de TDAH para usar?
         </h3>
-        <p className="mt-1 text-sm sm:text-base text-[#666666]">
+        <p className="mt-1 text-sm sm:text-base text-verde-musgo/80">
           Não, o planner foi desenvolvido para ajudar qualquer pessoa que se identifique com os desafios do TDAH, mesmo sem diagnóstico formal. As estratégias são úteis para qualquer pessoa que busca melhorar seu foco e organização.
         </p>
       </div>
@@ -475,67 +481,43 @@ const FAQ: React.FC = () => (
 
 
 const Footer: React.FC = () => (
-  <footer className="bg-[#FF4757] text-white text-center px-4 sm:px-6 py-6 border-t border-white/20">
-    <p className="font-bold text-lg">Planner Sem Caos</p>
-    <p className="text-sm mt-2 opacity-80">
+  <footer className="bg-verde-musgo text-creme-papel text-center px-4 sm:px-6 py-8 border-t border-terracota/20">
+    <p className="font-bold text-xl tracking-tight">Planner Sem Caos</p>
+    <p className="text-sm mt-2 opacity-70">
       &copy; {new Date().getFullYear()} Planner Sem Caos. Todos os Direitos Reservados.
     </p>
-    <p className="text-xs mt-4 opacity-80 max-w-md mx-auto">
+    <p className="text-xs mt-6 opacity-50 max-w-md mx-auto leading-relaxed">
       Investi anos de trabalho na pesquisa e design deste planner com a minha equipe. Por favor, respeite os criadores e apoie o trabalho original.
     </p>
-    <div className="text-xs mt-4 opacity-60 space-x-4">
-      <a href="#" className="underline hover:opacity-80 transition-opacity">Termos de Serviço</a>
-      <a href="#" className="underline hover:opacity-80 transition-opacity">Política de Privacidade</a>
+    <div className="text-xs mt-6 opacity-60 space-x-6">
+      <a href="#" className="hover:text-rosa-aquarela transition-colors">Termos de Serviço</a>
+      <a href="#" className="hover:text-rosa-aquarela transition-colors">Política de Privacidade</a>
     </div>
   </footer>
 );
 
-const WhatsAppButton: React.FC = () => (
-  <a
-    href="https://wa.me/5511964606571?text=Olá! Tenho interesse no Planner Sem Caos. Gostaria de saber mais informações."
-    target="_blank"
-    rel="noopener noreferrer"
-    className="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:bg-[#20BA5A] transition-all duration-300 hover:scale-110 z-50"
-    aria-label="Falar no WhatsApp"
-  >
-    <svg
-      className="w-6 h-6"
-      fill="currentColor"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
-    </svg>
-  </a>
-);
+
 
 function App({ showBlackFridayImages = false }: { showBlackFridayImages?: boolean }) {
   return (
-    <div className="min-h-screen bg-[#7B68EE] font-sans text-[#333333] antialiased">
+    <div className="min-h-screen bg-creme-papel font-sans text-verde-musgo antialiased">
       <Header />
-      <main className="max-w-screen-md mx-auto shadow-2xl">
-        <div className="bg-white">
+      <main className="max-w-screen-md mx-auto shadow-2xl bg-creme-papel">
+        <div className="bg-creme-papel">
           <Hero />
           <ScienceBasedSection />
 
       <Features />
       {showBlackFridayImages && (
-          <section className="px-4 sm:px-6 py-6">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <div className="rounded-lg overflow-hidden shadow-lg">
-                <img
-                  src="/images/black-friday/00.jpg"
-                  alt="Capa do Planner Sem Caos - ferramenta de organização para TDAH."
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-              <div className="rounded-lg overflow-hidden shadow-lg">
-                <img
-                  src="/images/black-friday/01.jpg"
-                  alt="Visualização da página de planejamento diário do Planner Sem Caos."
-                  className="w-full h-auto object-cover"
-                />
-              </div>
+          <section className="px-4 sm:px-6 py-6 bg-creme-papel">
+            <div className="max-w-4xl mx-auto">
+              <div className="rounded-lg overflow-hidden shadow-lg border border-terracota/10">
+                  <img
+                    src="/images/black-friday/planner2026.png"
+                    alt="Visualização do Planner 2026"
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
             </div>
           </section>
         )}
@@ -544,23 +526,9 @@ function App({ showBlackFridayImages = false }: { showBlackFridayImages?: boolea
           <Pricing />
           <Bonus />
         </div>
-        <div className="bg-white">
+        <div className="bg-creme-papel">
           <Testimonial />
-          <section className="bg-white py-12 px-4 sm:px-6">
-            <div className="max-w-6xl mx-auto text-center">
-              <h2 className="text-3xl font-bold text-[#333333] mb-4">Veja o que tem dentro do seu Planner</h2>
-              <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-                Explore algumas páginas cuidadosamente desenvolvidas para organizar sua rotina e potencializar sua produtividade.
-              </p>
-              <div className="max-w-3xl mx-auto space-y-8">
-                <img
-                  src="/images/inside-product/new-image.jpg"
-                  alt="Páginas do Planner Sem Caos (visão geral)"
-                  className="w-full h-auto object-contain"
-                />
-              </div>
-            </div>
-          </section>
+
           <WhoAmI />
     
         </div>
@@ -569,10 +537,12 @@ function App({ showBlackFridayImages = false }: { showBlackFridayImages?: boolea
         <Pricing />
         <Footer />
       </main>
-      <div className="text-center text-xs text-white/50 py-4">&nbsp;</div>
+      <div className="text-center text-xs text-verde-musgo/30 py-4">&nbsp;</div>
       
       <Analytics />
     </div>
+      
+
   );
 }
 
