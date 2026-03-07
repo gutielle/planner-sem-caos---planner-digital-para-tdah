@@ -386,9 +386,12 @@ const Pricing: React.FC = () => (
               "wbraid",
               "gbraid",
               "msclkid",
-              "src"
+              "src",
+              "sck"
             ]);
             const incoming = new URLSearchParams(window.location.search);
+            
+            // Pass allowed parameters
             incoming.forEach((value, key) => {
               if (allowed.has(key) || key.startsWith("utm_")) {
                 if (!url.searchParams.has(key)) {
@@ -396,6 +399,24 @@ const Pricing: React.FC = () => (
                 }
               }
             });
+
+            // Ensure sck (Source Check Key) is populated for Hotmart tracking
+            // "Hotmart funciona como SCK" - User request to ensure origin is tracked via SCK
+            if (!url.searchParams.has("sck")) {
+              const source = incoming.get("sck") || incoming.get("src") || incoming.get("utm_source") || incoming.get("utm_campaign") || incoming.get("utm_content") || incoming.get("utm_term");
+              if (source) {
+                url.searchParams.set("sck", source);
+              }
+            }
+
+            // Also ensure src is populated as fallback for producers
+            if (!url.searchParams.has("src")) {
+              const source = incoming.get("src") || incoming.get("sck") || incoming.get("utm_source") || incoming.get("utm_campaign") || incoming.get("utm_content") || incoming.get("utm_term");
+              if (source) {
+                url.searchParams.set("src", source);
+              }
+            }
+            
             return url.toString();
           })()}
           target="_blank"
