@@ -402,8 +402,18 @@ const Pricing: React.FC = () => (
 
             // Ensure sck (Source Check Key) is populated for Hotmart tracking
             // "Hotmart funciona como SCK" - User request to ensure origin is tracked via SCK
+            // Concat all UTM parameters to ensure full tracking
             if (!url.searchParams.has("sck")) {
-              const source = incoming.get("sck") || incoming.get("src") || incoming.get("utm_source") || incoming.get("utm_campaign") || incoming.get("utm_content") || incoming.get("utm_term");
+              const sckParts = [];
+              if (incoming.has("sck")) sckParts.push(incoming.get("sck"));
+              if (incoming.has("src")) sckParts.push(incoming.get("src"));
+              if (incoming.has("utm_source")) sckParts.push(incoming.get("utm_source"));
+              if (incoming.has("utm_campaign")) sckParts.push(incoming.get("utm_campaign"));
+              if (incoming.has("utm_medium")) sckParts.push(incoming.get("utm_medium"));
+              if (incoming.has("utm_content")) sckParts.push(incoming.get("utm_content"));
+              if (incoming.has("utm_term")) sckParts.push(incoming.get("utm_term"));
+              
+              const source = sckParts.join("|");
               if (source) {
                 url.searchParams.set("sck", source);
               }
@@ -411,7 +421,16 @@ const Pricing: React.FC = () => (
 
             // Also ensure src is populated as fallback for producers
             if (!url.searchParams.has("src")) {
-              const source = incoming.get("src") || incoming.get("sck") || incoming.get("utm_source") || incoming.get("utm_campaign") || incoming.get("utm_content") || incoming.get("utm_term");
+              const srcParts = [];
+              if (incoming.has("src")) srcParts.push(incoming.get("src"));
+              if (incoming.has("sck")) srcParts.push(incoming.get("sck"));
+              if (incoming.has("utm_source")) srcParts.push(incoming.get("utm_source"));
+              if (incoming.has("utm_campaign")) srcParts.push(incoming.get("utm_campaign"));
+              if (incoming.has("utm_medium")) srcParts.push(incoming.get("utm_medium"));
+              if (incoming.has("utm_content")) srcParts.push(incoming.get("utm_content"));
+              if (incoming.has("utm_term")) srcParts.push(incoming.get("utm_term"));
+
+              const source = srcParts.join("|");
               if (source) {
                 url.searchParams.set("src", source);
               }
