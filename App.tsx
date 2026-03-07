@@ -283,6 +283,7 @@ const ValidityNotice: React.FC = () => (
   </div>
 );
 
+
 const Pricing: React.FC = () => (
   <section id="pricing" className="text-verde-musgo text-center px-4 sm:px-6 py-10 sm:py-12 bg-creme-papel">
     <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-verde-musgo">Adquira Seu Planner 👇</h2>
