@@ -153,8 +153,8 @@ const bonusItems = [
   {
       headline: "O Segredo Escondido Dentro de Você",
       description: "Esse guia visual ajuda a identificar sentimentos escondidos, entender melhor as próprias emoções e dar os primeiros passos rumo ao autoconhecimento e bem-estar.",
-      image: "/images/bonus/emotional-iceberg.jpg",
-      aspectRatio: "1414/2000", // portrait
+      image: "/images/bonus/mentalidade.jpg",
+      aspectRatio: "1545/2000", // portrait
       pages: "+29 Páginas"
     },
   {
