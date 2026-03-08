@@ -144,6 +144,20 @@ const Features: React.FC = () => (
 
 const bonusItems = [
   {
+    headline: "Exercícios Prontos para Explorar o TDAH",
+    description: "Este guia foi criado para guiar você em exercícios e atividades que ajudam a explorar o TDAH de forma mais profunda, promovendo autoconhecimento, organização e crescimento pessoal.",
+    image: "/images/bonus/capa-sintomas.jpg",
+    aspectRatio: "1414/2000", // portrait
+    pages: "+26 Páginas"
+  },
+  {
+    headline: "O Segredo Escondido Dentro de Você",
+    description: "Esse guia visual ajuda a identificar sentimentos escondidos, entender melhor as próprias emoções e dar os primeiros passos rumo ao autoconhecimento e bem-estar.",
+    image: "/images/bonus/mentalidade.jpg",
+    aspectRatio: "1545/2000", // portrait
+    pages: "+29 Páginas"
+  },
+  {
     headline: "Organize, Respire e Brilhe: Checklist de Limpeza",
     description: "Esse checklist vai deixar sua rotina de limpeza mais organizada, leve e eficiente, economizando tempo e mantendo sua casa impecável.",
     image: "/images/bonus/cleaning-checklist.jpg",
@@ -151,34 +165,20 @@ const bonusItems = [
     pages: "+3 Páginas"
   },
   {
-      headline: "O Segredo Escondido Dentro de Você",
-      description: "Esse guia visual ajuda a identificar sentimentos escondidos, entender melhor as próprias emoções e dar os primeiros passos rumo ao autoconhecimento e bem-estar.",
-      image: "/images/bonus/mentalidade.jpg",
-      aspectRatio: "1545/2000", // portrait
-      pages: "+29 Páginas"
-    },
+    headline: "Coleção Premium de Exercícios Emocionais",
+    description: "Esse workbook é um companheiro de jornada, ajudando você a desenvolver mais autoconsciência, aceitação e bem-estar emocional.",
+    image: "/images/bonus/emotions-workbook.jpg",
+    aspectRatio: "2000/1414", // landscape
+    pages: "+10 Páginas"
+  },
   {
-      headline: "Coleção Premium de Exercícios Emocionais",
-      description: "Esse workbook é um companheiro de jornada, ajudando você a desenvolver mais autoconsciência, aceitação e bem-estar emocional.",
-      image: "/images/bonus/emotions-workbook.jpg",
-      aspectRatio: "2000/1414", // landscape
-      pages: "+10 Páginas"
-    },
-  {
-      headline: "Exercícios Prontos para Explorar o TDAH",
-      description: "Este guia foi criado para guiar você em exercícios e atividades que ajudam a explorar o TDAH de forma mais profunda, promovendo autoconhecimento, organização e crescimento pessoal.",
-      image: "/images/bonus/tdah-adventures.jpg",
-      aspectRatio: "1414/2000", // portrait
-      pages: "+26 Páginas"
-    },
-    {
-      headline: "Do Caos à Consciência: Diário de Sintomas",
-      description: "Com ele, você poderá preencher diariamente seus sintomas e, ao final do mês, ter uma visão clara do seu progresso e dos pontos que merecem mais atenção.",
-      image: "/images/bonus/symptom-tracker.jpg",
-      aspectRatio: "2000/1414", // landscape
-      pages: "+5 Páginas"
-    }
-  ];
+    headline: "Do Caos à Consciência: Diário de Sintomas",
+    description: "Com ele, você poderá preencher diariamente seus sintomas e, ao final do mês, ter uma visão clara do seu progresso e dos pontos que merecem mais atenção.",
+    image: "/images/bonus/symptom-tracker.jpg",
+    aspectRatio: "2000/1414", // landscape
+    pages: "+5 Páginas"
+  }
+];
 
 const Bonus: React.FC = () => (
   <section className="px-4 sm:px-6 py-8 sm:py-10 bg-rosa-aquarela">
