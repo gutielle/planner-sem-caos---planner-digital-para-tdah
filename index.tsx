@@ -2,6 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import AppES from './AppES';
 import BlackFriday from './BlackFriday';
 import Members from './Members';
 import './index.css';
@@ -22,6 +23,7 @@ root.render(
     <HashRouter>
       <Routes>
         <Route path="/" element={<App showBlackFridayImages />} />
+        <Route path="/es" element={<AppES />} />
         <Route path="/black-friday" element={<BlackFriday />} />
         <Route path="/members" element={<Members />} />
       </Routes>
