@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
       <div className="mt-8 px-4 sm:px-6">
         <div className="max-w-2xl mx-auto aspect-[2667/2000]">
           <img
-            src="/images/planner/hero.gif"
+            src="/images/planner/2667.jpg"
             alt="Capa do Planner Sem Caos - ferramenta de organização para TDAH"
             className="w-full h-full object-cover rounded-xl shadow-xl border-4 border-black"
           />
@@ -339,7 +339,7 @@ const Pricing: React.FC = () => (
           <ul className="space-y-2 text-sm text-left">
              <li className="flex items-center">
                <CheckIcon className="w-4 h-4 mr-2 text-dourado flex-shrink-0" />
-               <span>Organize, Respire e Brilhe: Checklist de Limpeza</span>
+               <span>Exercícios Prontos para Explorar o TDAH</span>
              </li>
              <li className="flex items-center">
                <CheckIcon className="w-4 h-4 mr-2 text-dourado flex-shrink-0" />
@@ -347,11 +347,11 @@ const Pricing: React.FC = () => (
              </li>
              <li className="flex items-center">
                <CheckIcon className="w-4 h-4 mr-2 text-dourado flex-shrink-0" />
-               <span>Coleção Premium de Exercícios Emocionais</span>
+               <span>Organize, Respire e Brilhe: Checklist de Limpeza</span>
              </li>
              <li className="flex items-center">
                <CheckIcon className="w-4 h-4 mr-2 text-dourado flex-shrink-0" />
-               <span>Exercícios Prontos para Explorar o TDAH</span>
+               <span>Coleção Premium de Exercícios Emocionais</span>
              </li>
              <li className="flex items-center">
                <CheckIcon className="w-4 h-4 mr-2 text-dourado flex-shrink-0" />
