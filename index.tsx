@@ -3,8 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import AppES from './AppES';
-import BlackFriday from './BlackFriday';
 import Members from './Members';
+import PixelManager from './PixelManager';
 import './index.css';
 import { injectSpeedInsights } from '@vercel/speed-insights';
 import { HashRouter, Routes, Route } from 'react-router-dom';
@@ -21,10 +21,10 @@ const root = ReactDOM.createRoot(rootElement);
 root.render(
   <React.StrictMode>
     <HashRouter>
+      <PixelManager />
       <Routes>
         <Route path="/" element={<App showBlackFridayImages />} />
         <Route path="/es" element={<AppES />} />
-        <Route path="/black-friday" element={<BlackFriday />} />
         <Route path="/members" element={<Members />} />
       </Routes>
     </HashRouter>
