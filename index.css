@@ -12,3 +12,24 @@
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+@keyframes pricingCoverFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.pricing-cover-animate {
+  animation: pricingCoverFloat 4s ease-in-out infinite;
+  transform: translateY(0);
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pricing-cover-animate {
+    animation: none;
+  }
+}
