@@ -14,7 +14,7 @@ const CheckIcon: React.FC<{ className?: string }> = ({ className = "w-6 h-6" }) 
 const Header: React.FC = () => (
   <header className="py-5 px-4 sm:px-6 bg-creme-papel">
     <div className="text-center">
-      <a href="#" className="text-verde-musgo text-2xl font-bold tracking-wider">Planner Sin Caos</a>
+      <a href="#" className="text-verde-musgo text-2xl font-bold tracking-wider">Mi Día Sin Caos</a>
     </div>
   </header>
 );
@@ -43,8 +43,8 @@ const Hero: React.FC = () => {
       <div className="mt-8 px-4 sm:px-6">
         <div className="max-w-2xl mx-auto aspect-[2667/2000]">
           <img
-            src="/images/planner/hero.gif"
-            alt="Portada del Planner Sin Caos - herramienta de organización para TDAH"
+            src="/images/es/hero.jpg"
+            alt="Portada del Mi Día Sin Caos - herramienta de organización para TDAH"
             className="w-full h-full object-cover rounded-xl shadow-xl border-4 border-black"
           />
         </div>
@@ -64,7 +64,7 @@ const ScienceBasedSection: React.FC = () => (
       </p>
       <div className="max-w-md mx-auto mb-8">
         <img 
-          src="/images/planner/respiracao-caixa.jpg" 
+          src="/images/es/brainstorming.jpg" 
           alt="Páginas del planner mostrando contenido basado en ciencia sobre TDAH"
           className="w-full h-auto rounded-lg shadow-md"
         />
@@ -74,7 +74,7 @@ const ScienceBasedSection: React.FC = () => (
       </p>
       <div className="max-w-md mx-auto mb-8">
          <img 
-           src="/images/planner/metas.jpg" 
+           src="/images/es/metas.jpg" 
            alt="Páginas del planner mostrando modelos únicos creados para TDAH"
            className="w-full h-auto rounded-lg shadow-md"
          />
@@ -84,7 +84,7 @@ const ScienceBasedSection: React.FC = () => (
        </p>
        <div className="max-w-md mx-auto mb-8">
           <img 
-            src="/images/planner/compras.jpg" 
+            src="/images/es/dificultades.jpg" 
             alt="Páginas del planner con tips y coaching para TDAH"
             className="w-full h-auto rounded-lg shadow-md"
           />
@@ -94,7 +94,7 @@ const ScienceBasedSection: React.FC = () => (
         </p>
         <div className="max-w-md mx-auto">
           <img 
-            src="/images/planner/priorizar.jpg" 
+            src="/images/es/desafio.jpg" 
             alt="Páginas del planner mostrando diseño flexible y personalizable"
             className="w-full h-auto rounded-lg shadow-md"
           />
@@ -146,35 +146,35 @@ const bonusItems = [
   {
     headline: "Ejercicios Listos para Explorar el TDAH",
     description: "Esta guía fue creada para guiarte en ejercicios y actividades que ayudan a explorar el TDAH de forma más profunda, promoviendo autoconocimiento, organización y crecimiento personal.",
-    image: "/images/bonus/capa-sintomas.jpg",
+    image: "/images/es/aventuras.jpg",
     aspectRatio: "1414/2000", // portrait
     pages: "+26 Páginas"
   },
   {
     headline: "El Secreto Escondido Dentro de Ti",
     description: "Esta guía visual ayuda a identificar sentimientos ocultos, entender mejor las propias emociones y dar los primeros pasos hacia el autoconocimiento y el bienestar.",
-    image: "/images/bonus/mentalidade.jpg",
+    image: "/images/es/profundidades.jpg",
     aspectRatio: "1545/2000", // portrait
     pages: "+29 Páginas"
   },
   {
     headline: "Organiza, Respira y Brilla: Checklist de Limpieza",
     description: "Este checklist dejará tu rutina de limpieza más organizada, ligera y eficiente, ahorrando tiempo y manteniendo tu casa impecable.",
-    image: "/images/bonus/cleaning-checklist.jpg",
+    image: "/images/es/checklist.jpg",
     aspectRatio: "2000/1414", // landscape
     pages: "+3 Páginas"
   },
   {
     headline: "Colección Premium de Ejercicios Emocionales",
     description: "Este workbook es un compañero de viaje, ayudándote a desarrollar más autoconciencia, aceptación y bienestar emocional.",
-    image: "/images/bonus/emotions-workbook.jpg",
+    image: "/images/es/sentimientos.jpg",
     aspectRatio: "2000/1414", // landscape
     pages: "+10 Páginas"
   },
   {
     headline: "Del Caos a la Conciencia: Diario de Síntomas",
     description: "Con él, podrás completar diariamente tus síntomas y, al final del mes, tener una visión clara de tu progreso y de los puntos que merecen más atención.",
-    image: "/images/bonus/symptom-tracker.jpg",
+    image: "/images/es/rastreador.jpg",
     aspectRatio: "2000/1414", // landscape
     pages: "+5 Páginas"
   }
@@ -212,7 +212,7 @@ const Bonus: React.FC = () => (
 
 const testimonials = [
   {
-    quote: "Ya intenté todos los planners que existen, pero ninguno funcionó. El Planner Sin Caos es diferente. Es flexible, no me hace sentir culpable por saltarme un día, y la sección de 'descarga de ideas' es una salvación. Finalmente estoy al día con mis plazos y me siento mucho menos ansioso.",
+    quote: "Ya intenté todos los planners que existen, pero ninguno funcionó. Mi Día Sin Caos es diferente. Es flexible, no me hace sentir culpable por saltarme un día, y la sección de 'descarga de ideas' es una salvación. Finalmente estoy al día con mis plazos y me siento mucho menos ansioso.",
     author: "Alex P."
   },
   {
@@ -249,7 +249,7 @@ const WhoAmI: React.FC = () => (
       <div className="md:w-1/3 flex justify-center">
         <img 
           src="/images/creator/profile.jpg" 
-          alt="Mariana Costa, educadora TDAH y creadora del Planner Sin Caos." 
+          alt="Mariana Costa, educadora TDAH y creadora de Mi Día Sin Caos." 
           className="rounded-full w-40 h-40 object-cover shadow-lg border-4 border-rosa-aquarela"
         />
       </div>
@@ -261,7 +261,7 @@ const WhoAmI: React.FC = () => (
           "Me dedico a crear herramientas y recursos que ayuden a personas neurodivergentes a prosperar. Sabemos, por experiencia propia, lo desafiante que puede ser encontrar sistemas que realmente funcionen, y estoy aquí para cambiar eso."
         </p>
         <p className="text-base sm:text-lg">
-          "Creé el <strong>Planner Sin Caos</strong> porque necesitaba una herramienta que se adaptara a mi cerebro, y no al revés. Mi esperanza es que te ayude a encontrar la misma claridad y control que me trajo a mí."
+          "Creé el <strong>Mi Día Sin Caos</strong> porque necesitaba una herramienta que se adaptara a mi cerebro, y no al revés. Mi esperanza es que te ayude a encontrar la misma claridad y control que me trajo a mí."
         </p>
         <p className="font-semibold text-right mt-4 text-terracota">- Juliana C.</p>
       </div>
@@ -292,7 +292,7 @@ const Pricing: React.FC = () => (
       <p>Recomenzar no necesita ser doloroso - Puede ser ligero, visual y a tu ritmo - incluso con TDAH</p>
       <p>En este Año Nuevo, haz este recomienzo más accesible.</p>
       <p>Tendrás todas las directrices para volverte disciplinado, inteligente y organizado, y dar todos los pasos necesarios para cambiar tu vida. ¡Un atajo para el crecimiento!</p>
-      <p>El Planner Sin Caos con valor especial. Aprovecha mientras está activo.</p>
+      <p>Mi Día Sin Caos con valor especial. Aprovecha mientras está activo.</p>
     </div>
     
     <div className="flex justify-center max-w-md mx-auto">
@@ -310,17 +310,17 @@ const Pricing: React.FC = () => (
         
         <p className="text-lg mb-2 text-verde-musgo/80">Pago único. Sin suscripciones.</p>
           <img 
-            src="/images/cover/cover2.jpg" 
-            alt="Portada del eBook Planner Sin Caos"
-            className="w-full max-w-[240px] mx-auto my-4 block rounded-lg shadow-lg ring-4 ring-terracota/10"
+            src="/images/es/notebook.jpg" 
+            alt="Portada del eBook Mi Día Sin Caos"
+            className="w-full max-w-[240px] mx-auto my-4 block"
             loading="lazy"
           />
         
 
         
         <div className="my-6">
-          <span className="text-2xl font-semibold line-through text-verde-musgo/40">R$ 98,00</span>
-          <span className="text-4xl sm:text-5xl font-black text-verde-musgo ml-2">R$ 39<span className="text-2xl sm:text-3xl align-top">,90</span></span>
+          <span className="text-2xl font-semibold line-through text-verde-musgo/40">US$ 28.29</span>
+          <span className="text-4xl sm:text-5xl font-black text-verde-musgo ml-2">US$ 9<span className="text-2xl sm:text-3xl align-top">.90</span></span>
         </div>
         <p className="text-sm text-verde-musgo/60 -mt-4 mb-4">Planner con más de 170 páginas</p>
         
@@ -367,7 +367,7 @@ const Pricing: React.FC = () => (
 
         <a 
           href={(function() {
-            const base = "https://pay.hotmart.com/B101638408P?off=eoj8cz98&checkoutMode=10";
+            const base = "https://pay.hotmart.com/U104856610K?off=j4uza5hf&checkoutMode=10";
             if (typeof window === "undefined") return base;
             let url: URL;
             try {
@@ -509,9 +509,9 @@ const FAQ: React.FC = () => (
 
 const Footer: React.FC = () => (
   <footer className="bg-verde-musgo text-creme-papel text-center px-4 sm:px-6 py-8 border-t border-terracota/20">
-    <p className="font-bold text-xl tracking-tight">Planner Sin Caos</p>
+    <p className="font-bold text-xl tracking-tight">Mi Día Sin Caos</p>
     <p className="text-sm mt-2 opacity-70">
-      &copy; {new Date().getFullYear()} Planner Sin Caos. Todos los Derechos Reservados.
+      &copy; {new Date().getFullYear()} Mi Día Sin Caos. Todos los Derechos Reservados.
     </p>
     <p className="text-xs mt-6 opacity-50 max-w-md mx-auto leading-relaxed">
       Invertí años de trabajo en la investigación y diseño de este planner con mi equipo. Por favor, respeta a los creadores y apoya el trabajo original.
