@@ -312,7 +312,7 @@ const Pricing: React.FC = () => (
           <img 
             src="/images/cover/capa-nova.jpg" 
             alt="Capa do eBook Planner Sem Caos"
-            className="w-full max-w-[240px] mx-auto my-4 block"
+            className="w-full max-w-[240px] mx-auto my-4 block pricing-cover-animate"
             loading="lazy"
           />
         
