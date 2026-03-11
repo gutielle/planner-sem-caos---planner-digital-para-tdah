@@ -174,7 +174,7 @@ const bonusItems = [
   {
     headline: "Do Caos à Consciência: Diário de Sintomas",
     description: "Com ele, você poderá preencher diariamente seus sintomas e, ao final do mês, ter uma visão clara do seu progresso e dos pontos que merecem mais atenção.",
-    image: "/images/bonus/symptom-tracker.jpg",
+    image: "/images/bonus/sono.jpg",
     aspectRatio: "2000/1414", // landscape
     pages: "+5 Páginas"
   }
@@ -310,9 +310,9 @@ const Pricing: React.FC = () => (
         
         <p className="text-lg mb-2 text-verde-musgo/80">Pagamento único. Sem assinaturas.</p>
           <img 
-            src="/images/cover/cover2.jpg" 
+            src="/images/cover/capa-nova.jpg" 
             alt="Capa do eBook Planner Sem Caos"
-            className="w-full max-w-[240px] mx-auto my-4 block rounded-lg shadow-lg ring-4 ring-terracota/10"
+            className="w-full max-w-[240px] mx-auto my-4 block"
             loading="lazy"
           />
         
@@ -525,7 +525,7 @@ const Footer: React.FC = () => (
 
 
 
-function App({ showBlackFridayImages = false }: { showBlackFridayImages?: boolean }) {
+function App() {
   return (
     <div className="min-h-screen bg-creme-papel font-sans text-verde-musgo antialiased">
       <Header />
@@ -535,19 +535,6 @@ function App({ showBlackFridayImages = false }: { showBlackFridayImages?: boolea
           <ScienceBasedSection />
 
       <Features />
-      {showBlackFridayImages && (
-          <section className="px-4 sm:px-6 py-6 bg-creme-papel">
-            <div className="max-w-4xl mx-auto">
-              <div className="rounded-lg overflow-hidden shadow-lg border border-terracota/10">
-                  <img
-                    src="/images/black-friday/planner2026.png"
-                    alt="Visualização do Planner 2026"
-                    className="w-full h-auto object-cover"
-                  />
-                </div>
-            </div>
-          </section>
-        )}
 
 
           <Pricing />
