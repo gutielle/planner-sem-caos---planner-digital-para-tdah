@@ -391,6 +391,16 @@ const Pricing: React.FC = () => (
               "sck"
             ]);
             const incoming = new URLSearchParams(window.location.search);
+            const hash = window.location.hash || "";
+            const hashQueryIndex = hash.indexOf("?");
+            if (hashQueryIndex !== -1) {
+              const hashParams = new URLSearchParams(hash.slice(hashQueryIndex));
+              hashParams.forEach((value, key) => {
+                if (!incoming.has(key)) {
+                  incoming.set(key, value);
+                }
+              });
+            }
             
             // Pass allowed parameters
             incoming.forEach((value, key) => {
