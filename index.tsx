@@ -23,7 +23,7 @@ root.render(
     <HashRouter>
       <PixelManager />
       <Routes>
-        <Route path="/" element={<App showBlackFridayImages />} />
+        <Route path="/" element={<App />} />
         <Route path="/es" element={<AppES />} />
         <Route path="/members" element={<Members />} />
       </Routes>
