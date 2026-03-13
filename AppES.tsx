@@ -153,7 +153,7 @@ const bonusItems = [
   {
     headline: "El Secreto Escondido Dentro de Ti",
     description: "Esta guía visual ayuda a identificar sentimientos ocultos, entender mejor las propias emociones y dar los primeros pasos hacia el autoconocimiento y el bienestar.",
-    image: "/images/es/profundidades.jpg",
+    image: "/images/es/mental-es.jpg",
     aspectRatio: "1545/2000", // portrait
     pages: "+29 Páginas"
   },
