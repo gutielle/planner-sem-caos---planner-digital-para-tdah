@@ -320,7 +320,7 @@ const Pricing: React.FC = () => (
         
         <div className="my-6">
           <span className="text-2xl font-semibold line-through text-verde-musgo/40">US$ 28.29</span>
-          <span className="text-4xl sm:text-5xl font-black text-verde-musgo ml-2">US$ 9<span className="text-2xl sm:text-3xl align-top">.90</span></span>
+          <span className="text-4xl sm:text-5xl font-black text-verde-musgo ml-2">US$ 7<span className="text-2xl sm:text-3xl align-top">.90</span></span>
         </div>
         <p className="text-sm text-verde-musgo/60 -mt-4 mb-4">Planner con más de 170 páginas</p>
         
