@@ -367,7 +367,7 @@ const Pricing: React.FC = () => (
 
         <a 
           href={(function() {
-            const base = "https://pay.hotmart.com/U104856610K?off=j4uza5hf&checkoutMode=10";
+            const base = "https://pay.hotmart.com/G105627121L?off=ywubcubb&checkoutMode=10";
             if (typeof window === "undefined") return base;
             let url: URL;
             try {
