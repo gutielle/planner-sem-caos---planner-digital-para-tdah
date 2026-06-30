@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import AppES from './AppES';
+import AppRemarketing from './AppRemarketing';
 import Members from './Members';
 import PixelManager from './PixelManager';
 import './index.css';
@@ -25,6 +26,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/es" element={<AppES />} />
+        <Route path="/remarketing" element={<AppRemarketing />} />
         <Route path="/members" element={<Members />} />
       </Routes>
     </HashRouter>
