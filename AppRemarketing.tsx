@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
         {/* Mensagem especial de remarketing */}
         <div className="mb-6">
           <p className="text-verde-musgo text-base sm:text-lg">
-            <span className="font-bold text-terracota">Bem-vindo de volta! 🎁</span> Preparamos um valor especial só pra você: <span className="font-bold text-terracota">R$ 37,00</span>.
+            <span className="font-bold text-terracota">Bem-vindo de volta! 🎁</span> Preparamos um valor especial só pra você: <span className="font-bold text-terracota">R$ 27,00</span>.
           </p>
         </div>
         
@@ -67,7 +67,7 @@ const Hero: React.FC = () => {
           Garantir Meu Planner
         </button>
         <p className="mt-4 text-base sm:text-lg text-verde-musgo/80 text-center">
-          +170 páginas + 5 bônus por R$ 37
+          +170 páginas + 5 bônus por R$ 27
         </p>
         <p className="text-sm sm:text-base text-terracota font-semibold text-center mt-1">
           (só nesta visita)
@@ -344,7 +344,7 @@ const Pricing: React.FC = () => (
         
         <div className="my-6">
           <span className="text-2xl font-semibold line-through text-verde-musgo/40">R$ 98,00</span>
-          <span className="text-4xl sm:text-5xl font-black text-verde-musgo ml-2">R$ 37<span className="text-2xl sm:text-3xl align-top">,00</span></span>
+          <span className="text-4xl sm:text-5xl font-black text-verde-musgo ml-2">R$ 27<span className="text-2xl sm:text-3xl align-top">,00</span></span>
         </div>
         <p className="text-sm text-verde-musgo/60 -mt-4 mb-4">Planner com mais de 170 páginas</p>
         
@@ -391,7 +391,7 @@ const Pricing: React.FC = () => (
 
         <a 
           href={(function() {
-            const base = "https://pay.hotmart.com/G105627121L?off=ywubcubb&checkoutMode=10";
+            const base = "https://pay.hotmart.com/G105627121L?off=jr9dagv7&checkoutMode=10";
             if (typeof window === "undefined") return base;
             let url: URL;
             try {
