@@ -174,7 +174,7 @@ const bonusItems = [
   {
     headline: "Do Caos à Consciência: Diário de Sintomas",
     description: "Com ele, você poderá preencher diariamente seus sintomas e, ao final do mês, ter uma visão clara do seu progresso e dos pontos que merecem mais atenção.",
-    image: "/images/bonus/sono.jpg",
+    image: "/images/bonus/medicamentos.jpg",
     aspectRatio: "2000/1414", // landscape
     pages: "+5 Páginas"
   }
