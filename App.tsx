@@ -330,7 +330,7 @@ const Pricing: React.FC = () => (
             Oferta especial por tempo limitado
           </p>
           <p className="text-base sm:text-lg font-bold text-verde-musgo leading-tight">
-            Garanta o Planner Sem Caos agora e leve a nova versao 2.0 de graça.
+            Garanta o Planner Sem Caos agora e leve a nova versão 2.0 de graça.
           </p>
           <div className="my-4 flex flex-col items-center">
             <img
@@ -339,6 +339,9 @@ const Pricing: React.FC = () => (
               className="w-full max-w-[220px] block"
               loading="lazy"
             />
+            <p className="mt-3 text-lg font-bold text-verde-musgo/50 line-through">
+              R$ 97,00
+            </p>
             <span className="inline-block text-terracota text-sm font-bold tracking-[0.2em] uppercase border-b-2 border-terracota pb-1 mt-3">
               Lançamento
             </span>
