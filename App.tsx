@@ -324,6 +324,29 @@ const Pricing: React.FC = () => (
           <span className="text-4xl sm:text-5xl font-black text-verde-musgo ml-2">R$ 37<span className="text-2xl sm:text-3xl align-top">,00</span></span>
         </div>
         <p className="text-sm text-verde-musgo/60 -mt-4 mb-4">Planner com mais de 170 páginas</p>
+
+        <div className="bg-creme-papel border border-terracota rounded-lg p-4 mb-6 shadow-sm">
+          <p className="text-xs font-bold tracking-wide uppercase text-terracota mb-2">
+            Oferta especial por tempo limitado
+          </p>
+          <p className="text-base sm:text-lg font-bold text-verde-musgo leading-tight">
+            Garanta o Planner Sem Caos agora e leve a nova versao 2.0 de graça.
+          </p>
+          <div className="my-4 flex flex-col items-center">
+            <img
+              src="/images/cover/planner2.0.jpg"
+              alt="Mockup da nova versao 2.0 do Planner Sem Caos"
+              className="w-full max-w-[220px] block"
+              loading="lazy"
+            />
+            <span className="inline-block text-terracota text-sm font-bold tracking-[0.2em] uppercase border-b-2 border-terracota pb-1 mt-3">
+              Lançamento
+            </span>
+          </div>
+          <p className="text-sm text-verde-musgo/70 mt-2">
+            Essa condição promocional pode sair do ar a qualquer momento.
+          </p>
+        </div>
         
 
         <ul className="space-y-3 text-left mb-6">
