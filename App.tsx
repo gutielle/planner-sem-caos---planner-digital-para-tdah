@@ -330,7 +330,7 @@ const Pricing: React.FC = () => (
             Oferta especial por tempo limitado
           </p>
           <p className="text-base sm:text-lg font-bold text-verde-musgo leading-tight">
-            Garanta o Planner Sem Caos agora e leve a nova versão 2.0 de graça.
+            Garanta o Planner Sem Caos e leve a nova versão 2.0 de graça.
           </p>
           <div className="my-4 flex flex-col items-center">
             <img
