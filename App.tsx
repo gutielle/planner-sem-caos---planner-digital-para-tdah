@@ -288,7 +288,7 @@ const Pricing: React.FC = () => (
   <section id="pricing" className="text-verde-musgo text-center px-4 sm:px-6 py-10 sm:py-12 bg-creme-papel">
     <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-verde-musgo">Adquira Seu Planner 👇</h2>
     <div className="mt-2 mb-8 text-base sm:text-lg max-w-lg mx-auto space-y-4 text-verde-musgo/80">
-      <p>Já estamos quase na metade do ano…</p>
+      <p>Faltam poucos meses pra virada do ano…</p>
       <p>e você ainda sente que está perdido?</p>
       <p>Rotina bagunçada, planos que não saem do papel, foco que vai e volta…</p>
       <p>Não é sobre tentar mais é sobre ter o sistema certo.</p>
