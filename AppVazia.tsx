@@ -459,7 +459,7 @@ const Educar: React.FC = () => {
       descricao: 'Sabe exatamente o que fazer e, mesmo assim, não começa.',
       antidotoNome: 'Cardápio de Empurrõezinhos.',
       antidoto: 'Escolha uma entrada de 2 minutos, um prato principal de 15 minutos e uma sobremesa, que é a sua recompensa.',
-      imagem: '/images/viloes/cardapio-de-empurroes.jpg',
+      imagem: '/images/viloes/cardapio-de-empurroes.jpg?v=2',
     },
     {
       n: 2,
@@ -467,7 +467,7 @@ const Educar: React.FC = () => {
       descricao: 'A cabeça pensa em tudo ao mesmo tempo e não desliga.',
       antidotoNome: 'Gavetas da Mente.',
       antidoto: 'Guarde cada preocupação na sua gaveta (trabalho, casa, pessoas, saúde, dinheiro, ideias soltas) e escolha qual abrir primeiro.',
-      imagem: '/images/viloes/gavetas-mente.jpg',
+      imagem: '/images/viloes/gavetas-mente.jpg?v=2',
     },
     {
       n: 3,
@@ -475,7 +475,7 @@ const Educar: React.FC = () => {
       descricao: 'Tudo é urgente, tudo é para ontem.',
       antidotoNome: 'Meu Fogão de Tarefas.',
       antidoto: 'Coloque cada tarefa numa boca do fogão: fogo alto (faço agora), médio (faço em seguida), baixo (pode esperar) ou desligado (não é para hoje). Só uma panela no fogo alto por vez.',
-      imagem: '/images/viloes/tarefas-fogao.jpg',
+      imagem: '/images/viloes/tarefas-fogao.jpg?v=2',
     },
   ];
 
