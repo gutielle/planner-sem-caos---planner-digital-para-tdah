@@ -329,7 +329,7 @@ const Gallery: React.FC = () => {
 // 1 · Q · Qualificar (topo)
 // ============================================================
 const Hero: React.FC = () => (
-  <section className={`px-[20px] sm:px-[40px] pt-[64px] sm:pt-[96px] pb-[48px] sm:pb-[64px] border-b ${HAIR}`}>
+  <section className={`px-[20px] sm:px-[40px] pt-[32px] sm:pt-[48px] pb-[48px] sm:pb-[64px] border-b ${HAIR}`}>
     <div className="flex items-center justify-center gap-[8px] text-center">
       <span className="w-[6px] h-[6px] rounded-full bg-[#E8604C] shrink-0" />
       <p className="mono text-[12px] tracking-[0.02em] text-[#E8604C]">
