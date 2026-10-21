@@ -459,7 +459,7 @@ const Educar: React.FC = () => {
       descricao: 'Sabe exatamente o que fazer e, mesmo assim, não começa.',
       antidotoNome: 'Cardápio de Empurrõezinhos.',
       antidoto: 'Escolha uma entrada de 2 minutos, um prato principal de 15 minutos e uma sobremesa, que é a sua recompensa.',
-      imagem: '/images/nova-versao/versao03.jpg',
+      imagem: '/images/viloes/cardapio-de-empurroes.jpg',
     },
     {
       n: 2,
