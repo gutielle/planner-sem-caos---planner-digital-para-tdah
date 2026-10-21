@@ -326,50 +326,6 @@ const Gallery: React.FC = () => {
 };
 
 // ============================================================
-// Menu
-// ============================================================
-const Navbar: React.FC = () => {
-  const links = [
-    { label: 'O diagnóstico', href: '#espelho' },
-    { label: 'O que tem na caixa', href: '#caixa' },
-    { label: 'Bônus', href: '#bonus' },
-    { label: 'Preço', href: '#preco' },
-  ];
-
-  const go = (event: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    const el = document.querySelector(href);
-    if (!el) return;
-    event.preventDefault();
-    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
-  };
-
-  return (
-    <header className="sticky top-0 z-30 bg-white/90 backdrop-blur border-b border-[#141414]/[0.08]">
-      <div className="h-16 px-[20px] sm:px-[40px] flex items-center justify-between gap-4">
-        <a href="#" className="flex items-center gap-[8px] shrink-0">
-          <span className="w-[18px] h-[18px] rounded-[5px] bg-[#141414]" />
-          <span className="text-[15px] font-semibold tracking-[-0.02em] text-[#141414]">Planner Sem Caos</span>
-        </a>
-
-        <nav className="hidden md:flex items-center gap-[28px]">
-          {links.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              onClick={(event) => go(event, link.href)}
-              className={`${T.ui} ${C.ink60} hover:text-[#141414] transition-colors duration-150`}
-            >
-              {link.label}
-            </a>
-          ))}
-        </nav>
-      </div>
-    </header>
-  );
-};
-
-// ============================================================
 // 1 · Q · Qualificar (topo)
 // ============================================================
 const Hero: React.FC = () => (
@@ -1316,7 +1272,6 @@ function AppVazia() {
         }}
       >
         <div className="mx-auto max-w-[1080px] bg-white border-x border-[#141414]/[0.08]">
-          <Navbar />
           <Hero />
           <DemoStrip />
           <Espelho />
