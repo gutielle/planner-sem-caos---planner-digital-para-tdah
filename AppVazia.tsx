@@ -916,7 +916,7 @@ const Pricing: React.FC = () => {
 
           <div className="mt-[28px] mx-auto max-w-[260px]">
             <img
-              src="/images/cover/imagem-oferta.png"
+              src="/images/cover/imagem-oferta.png?v=2"
               alt="Mockup do Planner Sem Caos"
               className="w-full h-auto"
             />

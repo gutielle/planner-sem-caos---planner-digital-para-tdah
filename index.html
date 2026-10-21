@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2BGCZQ3PB6"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-2BGCZQ3PB6');
-    </script>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WJB2X74F');</script>
-    <!-- End Google Tag Manager -->
-    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="facebook-domain-verification" content="ndt4qgqe8l5n3dq69yi908ooivqgfz" />
+
+    <!-- Redirect legado: /#/planner → /planner (preserva UTMs e parâmetros de campanha) -->
+    <script>
+      (function () {
+        var hash = window.location.hash || '';
+        if (hash !== '#/planner' && hash.indexOf('#/planner?') !== 0) return;
+        var params = new URLSearchParams(window.location.search);
+        var rest = hash.slice('#/planner'.length);
+        if (rest.charAt(0) === '?') rest = rest.slice(1);
+        if (rest) {
+          new URLSearchParams(rest).forEach(function (value, key) {
+            if (!params.has(key)) params.set(key, value);
+          });
+        }
+        var query = params.toString();
+        window.location.replace('/planner' + (query ? '?' + query : ''));
+      })();
+    </script>
+
     <title>Planner Sem Caos - O Planner Digital para Adultos com TDAH</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
- 
-  <script type="importmap">
+
+    <script type="importmap">
 {
   "imports": {
     "react/": "https://aistudiocdn.com/react@^19.1.1/",
@@ -37,14 +39,7 @@
   }
 }
 </script>
-    <!-- Microsoft Clarity -->
-    <script type="text/javascript">
-      (function(c,l,a,r,i,t,y){
-          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "tk2xiwtol5");
-    </script>
+
     <script id="hotmart_launcher_script"> 
       (function(l,a,u,n,c,h,e,r){l['HotmartLauncherObject']=c;l[c]=l[c]||function(){ 
       (l[c].q=l[c].q||[]).push(arguments)},l[c].l=1*new Date();h=a.createElement(u), 
@@ -52,12 +47,23 @@
       })(window,document,'script','//launcher.hotmart.com/launcher.js','hot'); 
       hot('account','d1e81a36-2e35-340b-9d5c-6770594ab23b'); 
     </script>
+
+    <!-- Meta Pixel -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '619201927930702');
+      fbq('track', 'PageView');
+    </script>
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJB2X74F"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=619201927930702&ev=PageView&noscript=1" alt="" /></noscript>
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
   </body>
