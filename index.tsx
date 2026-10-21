@@ -26,7 +26,7 @@ root.render(
       <PixelManager />
       <Routes>
         <Route path="/" element={<AppAntigo />} />
-        <Route path="/vazia" element={<AppVazia />} />
+        <Route path="/planner" element={<AppVazia />} />
         <Route path="/es" element={<AppES />} />
         <Route path="/remarketing" element={<AppRemarketing />} />
         <Route path="/members" element={<Members />} />
