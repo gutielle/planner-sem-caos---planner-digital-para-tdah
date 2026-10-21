@@ -232,20 +232,10 @@ const SectionHeader: React.FC<{ eyebrow?: string; title: string; subtitle?: stri
 // "Veja por dentro" — galeria das 12 páginas do planner
 // ============================================================
 const Gallery: React.FC = () => {
-  const pages = [
-    '/images/nova-versao/versao01.jpg',
-    '/images/nova-versao/versao02.jpg',
-    '/images/nova-versao/versao03.jpg',
-    '/images/nova-versao/versao04.jpg',
-    '/images/nova-versao/versao05.jpg',
-    '/images/nova-versao/versao06.jpg',
-    '/images/nova-versao/versao07.jpg',
-    '/images/nova-versao/versao08.jpg',
-    '/images/nova-versao/versao09.jpg',
-    '/images/nova-versao/versao10.jpg',
-    '/images/nova-versao/versao11.jpg',
-    '/images/nova-versao/versao12.jpg',
-  ];
+  const pages = Array.from(
+    { length: 12 },
+    (_, i) => `/images/nova-versao/versao${String(i + 1).padStart(2, '0')}.jpg?v=2`,
+  );
 
   const trackRef = React.useRef<HTMLDivElement>(null);
   const [canPrev, setCanPrev] = React.useState(false);
