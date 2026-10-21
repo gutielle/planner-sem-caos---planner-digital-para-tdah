@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
       <div className="mt-8 px-4 sm:px-6">
         <div className="max-w-md mx-auto aspect-[1728/2304]">
           <img
-            src="/images/cover/capa-mockup-novo.jpg"
+            src="/images/cover/capa-mockup-novo.png"
             alt="Capa do Planner Sem Caos - ferramenta de organização para TDAH"
             className="w-full h-full object-contain"
           />
@@ -366,7 +366,7 @@ const Pricing: React.FC = () => (
         
         <p className="text-lg mb-2 text-verde-musgo/80">Pagamento único. Sem assinaturas.</p>
           <img 
-            src="/images/cover/imagem-oferta.jpg" 
+            src="/images/cover/imagem-oferta.png" 
             alt="Capa do eBook Planner Sem Caos"
             className="w-full max-w-[240px] mx-auto my-4 block pricing-cover-animate"
             loading="lazy"

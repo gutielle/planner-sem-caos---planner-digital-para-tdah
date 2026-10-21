@@ -340,7 +340,7 @@ const Hero: React.FC = () => (
 
     <div className="mt-[40px] mx-auto max-w-[560px]">
       <img
-        src="/images/cover/capa-mockup-novo.jpg"
+        src="/images/cover/capa-mockup-novo.png"
         alt="Mockup do Planner Sem Caos"
         className="w-full h-auto"
       />
@@ -798,42 +798,42 @@ const BonusCards: React.FC = () => {
       label: 'bônus 01',
       text: 'Descubra quanto o TDAH já te custou, em reais e em horas: uma checklist de vazamentos (conta esquecida com juros, compra por impulso, curso pago e largado, coisa perdida e comprada de novo, prazo estourado), uma trava simples para cada um, 15 minutos por semana para conferir e um placar do que você já deixou de perder.',
       accent: 'coral',
-      imagem: '/images/novos-bonus/tdah-imposto.jpg',
+      imagem: '/images/novos-bonus/tdah-imposto.png',
     },
     {
       title: 'Mapa da Faxina',
       label: 'bônus 02',
       text: 'A casa dividida em zonas e limpa em rodadas de 15 minutos, com a ordem já decidida, para a faxina não virar um projeto de horas que você nem começa. Dá para dividir as zonas entre quem mora com você.',
       accent: 'blue',
-      imagem: '/images/novos-bonus/mapa-faxina.jpg',
+      imagem: '/images/novos-bonus/mapa-faxina.png',
     },
     {
       title: 'Reescrevendo a Minha História',
       label: 'bônus 03',
       text: 'Páginas guiadas para revisitar os rótulos que você carregou por anos (“preguiçosa(o)”, “desligada(o)”, “cabeça de vento”) e escrever, ao lado de cada um, o que realmente estava acontecendo.',
       accent: 'purple',
-      imagem: '/images/novos-bonus/minha-historia.jpg',
+      imagem: '/images/novos-bonus/minha-historia.png',
     },
     {
       title: 'Planner Sem Caos Kids',
       label: 'bônus 04',
       text: 'A versão para os pequenos, para organizar a rotina das crianças que têm os mesmos desafios que você. Porque, quando o diagnóstico chega, muitas vezes ele não chega só para um da casa.',
       accent: 'green',
-      imagem: '/images/novos-bonus/kids.jpg',
+      imagem: '/images/novos-bonus/kids.png',
     },
     {
       title: 'Como Contar para Quem Importa',
       label: 'bônus 05',
       text: 'Roteiros curtos para explicar o TDAH ao parceiro, à família e, se você quiser, no trabalho. Mais um espaço para combinar como essas pessoas podem ajudar, e o que não ajuda.',
       accent: 'amber',
-      imagem: '/images/novos-bonus/paraquem-importa.jpg',
+      imagem: '/images/novos-bonus/paraquem-importa.png',
     },
     {
       title: 'Trabalho e Estudo sem Travar',
       label: 'bônus 06',
       text: 'Modelos para reuniões (o que foi decidido e o que eu preciso fazer depois), para responder e-mails acumulados e para estudar em blocos curtos, anotando o que distraiu.',
       accent: 'blue',
-      imagem: '/images/novos-bonus/trabalho-estudos.jpg',
+      imagem: '/images/novos-bonus/trabalho-estudos.png',
     },
   ];
 
@@ -916,7 +916,7 @@ const Pricing: React.FC = () => {
 
           <div className="mt-[28px] mx-auto max-w-[260px]">
             <img
-              src="/images/cover/imagem-oferta.jpg"
+              src="/images/cover/imagem-oferta.png"
               alt="Mockup do Planner Sem Caos"
               className="w-full h-auto"
             />
