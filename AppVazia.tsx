@@ -235,7 +235,7 @@ const Gallery: React.FC = () => {
   const pages = [
     '/images/nova-versao/versao01.jpg',
     '/images/nova-versao/versao02.jpg',
-    '/images/nova-versao/quando-eu-vou.jpg',
+    '/images/nova-versao/versao03.jpg',
     '/images/nova-versao/versao04.jpg',
     '/images/nova-versao/versao05.jpg',
     '/images/nova-versao/versao06.jpg',
