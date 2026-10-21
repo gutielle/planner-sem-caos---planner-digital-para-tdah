@@ -12,9 +12,9 @@ const CheckIcon: React.FC<{ className?: string }> = ({ className = "w-6 h-6" }) 
 // --- Page Section Components ---
 
 const Header: React.FC = () => (
-  <header className="py-5 px-4 sm:px-6 bg-creme-papel">
+  <header className="py-5 px-4 sm:px-6 bg-[#FBF6EE]">
     <div className="text-center">
-      <a href="#" className="text-verde-musgo text-2xl font-bold tracking-wider">Planner Sem Caos</a>
+      <a href="#" className="text-[#3A2A1A] text-2xl font-bold tracking-wider">Planner Sem Caos</a>
     </div>
   </header>
 );
@@ -31,12 +31,12 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section className="text-center pt-8 sm:pt-12 pb-6 sm:pb-8 bg-creme-papel">
+    <section className="text-center pt-8 sm:pt-12 pb-6 sm:pb-8 bg-[#FBF6EE]">
       <div className="px-4 sm:px-6">
-        <h1 className="text-4xl sm:text-5xl font-black text-verde-musgo leading-tight">
+        <h1 className="text-4xl sm:text-5xl font-black text-[#3A2A1A] leading-tight">
           Finalmente, um Planner Feito para o Cérebro com TDAH.
         </h1>
-        <p className="mt-4 text-base sm:text-lg text-verde-musgo/80">
+        <p className="mt-4 text-base sm:text-lg text-[#3A2A1A]/80">
           Pare de lutar contra seu cérebro e comece a trabalhar com ele. Nosso planner digital ajuda você a domar o caos, gerenciar prioridades e finalmente concluir suas tarefas.
         </p>
       </div>
@@ -54,12 +54,12 @@ const Hero: React.FC = () => {
   };
 
 const ScienceBasedSection: React.FC = () => (
-  <section className="px-4 sm:px-6 py-12 sm:py-16 bg-rosa-aquarela">
+  <section className="px-4 sm:px-6 py-12 sm:py-16 bg-[#F4C97A]">
     <div className="max-w-4xl mx-auto text-center">
-      <h2 className="text-3xl sm:text-4xl font-bold text-verde-musgo mb-6">
+      <h2 className="text-3xl sm:text-4xl font-bold text-[#3A2A1A] mb-6">
         Nossos planners são modernos e baseados em ciência
       </h2>
-      <p className="text-lg text-verde-musgo/80 mb-8 max-w-3xl mx-auto leading-relaxed">
+      <p className="text-lg text-[#3A2A1A]/80 mb-8 max-w-3xl mx-auto leading-relaxed">
         Descubra como funciona o seu cérebro com TDAH, com páginas que explicam hábitos inconscientes e neurobiologia, além de dicas de leitura para se aprofundar
       </p>
       <div className="max-w-md mx-auto mb-8">
@@ -69,7 +69,7 @@ const ScienceBasedSection: React.FC = () => (
           className="w-full h-auto rounded-lg shadow-md"
         />
       </div>
-      <p className="text-lg text-verde-musgo/80 mb-8 max-w-3xl mx-auto leading-relaxed">
+      <p className="text-lg text-[#3A2A1A]/80 mb-8 max-w-3xl mx-auto leading-relaxed">
         Modelos inéditos para TDAH que eu criei, como a Flor de Lótus do Hiperfoco, a Regra de Poupança 10&10, o Planner de Foco para Ligações, o Carrinho de Compras de 24 Horas, o Checklist de Compras por Impulso, o Planejamento DIV/CON, as Pétalas do Poder da Produtividade e muito mais!
       </p>
       <div className="max-w-md mx-auto mb-8">
@@ -79,7 +79,7 @@ const ScienceBasedSection: React.FC = () => (
            className="w-full h-auto rounded-lg shadow-md"
          />
        </div>
-       <p className="text-lg text-verde-musgo/80 mb-8 max-w-3xl mx-auto leading-relaxed">
+       <p className="text-lg text-[#3A2A1A]/80 mb-8 max-w-3xl mx-auto leading-relaxed">
          Dicas, conselhos e coaching para te ajudar a focar nos seus pontos fortes e criar hábitos e rotinas que cuidem de você e funcionem junto com o seu cérebro, em vez de contra ele.
        </p>
        <div className="max-w-md mx-auto mb-8">
@@ -89,7 +89,7 @@ const ScienceBasedSection: React.FC = () => (
             className="w-full h-auto rounded-lg shadow-md"
           />
         </div>
-        <p className="text-lg text-verde-musgo/80 mb-8 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-lg text-[#3A2A1A]/80 mb-8 max-w-3xl mx-auto leading-relaxed">
           Design e estrutura únicos que te dão total flexibilidade para personalizar o planner totalmente para a sua vida, rotina e trabalho.
         </p>
         <div className="max-w-md mx-auto">
@@ -109,33 +109,33 @@ const ScienceBasedSection: React.FC = () => (
 
 
 const Features: React.FC = () => (
-    <section className="px-4 sm:px-6 py-8 sm:py-10 bg-creme-papel">
-      <h2 className="text-2xl sm:text-3xl font-bold text-verde-musgo mb-8 text-center">Projetado para Ajudar Você a Prosperar</h2>
+    <section className="px-4 sm:px-6 py-8 sm:py-10 bg-[#FBF6EE]">
+      <h2 className="text-2xl sm:text-3xl font-bold text-[#3A2A1A] mb-8 text-center">Projetado para Ajudar Você a Prosperar</h2>
       <div className="grid md:grid-cols-2 gap-x-8 gap-y-6">
         <div>
-          <h3 className="text-xl font-semibold text-terracota mb-3">O Que Vem Dentro</h3>
-          <ul className="space-y-2 text-verde-musgo">
-             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0 mt-1" /><span>Planejamentos diários, semanais e mensais – organize tudo de forma simples e clara</span></li>
-             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0 mt-1" /><span>Listas e trackers práticos – nunca mais esqueça o que é importante</span></li>
-             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0 mt-1" /><span>Hábitos saudáveis – defina e alcance suas metas com orientação passo a passo</span></li>
-             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0 mt-1" /><span>Autocuidado em foco – trackers para cuidar de você todos os dias</span></li>
-             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0 mt-1" /><span>Controle financeiro fácil – acompanhe orçamento e finanças sem stress</span></li>
-             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0 mt-1" /><span>Casa em ordem – ferramentas para organizar o dia a dia do lar</span></li>
-             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0 mt-1" /><span>Mente tranquila – técnicas baseadas em evidências para acalmar e focar</span></li>
-             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0 mt-1" /><span>E muito mais!!</span></li>
+          <h3 className="text-xl font-semibold text-[#9C3D1A] mb-3">O Que Vem Dentro</h3>
+          <ul className="space-y-2 text-[#3A2A1A]">
+             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-[#E07B39] flex-shrink-0 mt-1" /><span>Planejamentos diários, semanais e mensais – organize tudo de forma simples e clara</span></li>
+             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-[#E07B39] flex-shrink-0 mt-1" /><span>Listas e trackers práticos – nunca mais esqueça o que é importante</span></li>
+             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-[#E07B39] flex-shrink-0 mt-1" /><span>Hábitos saudáveis – defina e alcance suas metas com orientação passo a passo</span></li>
+             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-[#E07B39] flex-shrink-0 mt-1" /><span>Autocuidado em foco – trackers para cuidar de você todos os dias</span></li>
+             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-[#E07B39] flex-shrink-0 mt-1" /><span>Controle financeiro fácil – acompanhe orçamento e finanças sem stress</span></li>
+             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-[#E07B39] flex-shrink-0 mt-1" /><span>Casa em ordem – ferramentas para organizar o dia a dia do lar</span></li>
+             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-[#E07B39] flex-shrink-0 mt-1" /><span>Mente tranquila – técnicas baseadas em evidências para acalmar e focar</span></li>
+             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-[#E07B39] flex-shrink-0 mt-1" /><span>E muito mais!!</span></li>
           </ul>
         </div>
         <div>
-          <h3 className="text-xl font-semibold text-terracota mb-3">Benefícios para o Seu Cérebro</h3>
-          <ul className="space-y-2 text-verde-musgo">
-             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0 mt-1" /><span>Reduza a sobrecarga com uma estrutura clara.</span></li>
-             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0 mt-1" /><span>Mantenha-se motivado com rastreadores visuais.</span></li>
-             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0 mt-1" /><span>Abrace a criatividade com espaço para anotações.</span></li>
-             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0 mt-1" /><span>Crie rotinas que realmente funcionam.</span></li>
-             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0 mt-1" /><span>Melhore o foco com técnicas adaptadas ao TDAH.</span></li>
-             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0 mt-1" /><span>Diminua a ansiedade com planejamento estruturado.</span></li>
-             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0 mt-1" /><span>Aumente a autoestima celebrando pequenas conquistas.</span></li>
-             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0 mt-1" /><span>Desenvolva autodisciplina com ferramentas práticas.</span></li>
+          <h3 className="text-xl font-semibold text-[#9C3D1A] mb-3">Benefícios para o Seu Cérebro</h3>
+          <ul className="space-y-2 text-[#3A2A1A]">
+             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-[#E07B39] flex-shrink-0 mt-1" /><span>Reduza a sobrecarga com uma estrutura clara.</span></li>
+             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-[#E07B39] flex-shrink-0 mt-1" /><span>Mantenha-se motivado com rastreadores visuais.</span></li>
+             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-[#E07B39] flex-shrink-0 mt-1" /><span>Abrace a criatividade com espaço para anotações.</span></li>
+             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-[#E07B39] flex-shrink-0 mt-1" /><span>Crie rotinas que realmente funcionam.</span></li>
+             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-[#E07B39] flex-shrink-0 mt-1" /><span>Melhore o foco com técnicas adaptadas ao TDAH.</span></li>
+             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-[#E07B39] flex-shrink-0 mt-1" /><span>Diminua a ansiedade com planejamento estruturado.</span></li>
+             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-[#E07B39] flex-shrink-0 mt-1" /><span>Aumente a autoestima celebrando pequenas conquistas.</span></li>
+             <li className="flex items-start"><CheckIcon className="w-5 h-5 mr-2 text-[#E07B39] flex-shrink-0 mt-1" /><span>Desenvolva autodisciplina com ferramentas práticas.</span></li>
           </ul>
         </div>
       </div>
@@ -181,8 +181,8 @@ const bonusItems = [
 ];
 
 const Bonus: React.FC = () => (
-  <section className="px-4 sm:px-6 py-8 sm:py-10 bg-rosa-aquarela">
-    <h2 className="text-2xl sm:text-3xl font-bold text-verde-musgo mb-8 text-center">Bônus Exclusivos Inclusos</h2>
+  <section className="px-4 sm:px-6 py-8 sm:py-10 bg-[#F4C97A]">
+    <h2 className="text-2xl sm:text-3xl font-bold text-[#3A2A1A] mb-8 text-center">Bônus Exclusivos Inclusos</h2>
     <div className="space-y-8">
       {bonusItems.map((bonus, index) => (
         <div key={index} className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-6 md:gap-8`}>
@@ -195,14 +195,14 @@ const Bonus: React.FC = () => (
               />
             </div>
             <div className="mt-3 flex justify-center">
-              <span className="bg-terracota text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+              <span className="bg-[#9C3D1A] text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
                 {bonus.pages}
               </span>
             </div>
           </div>
           <div className="md:w-1/2 text-center md:text-left">
-            <h3 className="text-xl sm:text-2xl font-bold text-terracota mb-4">{bonus.headline}</h3>
-            <p className="text-base sm:text-lg text-verde-musgo leading-relaxed">{bonus.description}</p>
+            <h3 className="text-xl sm:text-2xl font-bold text-[#9C3D1A] mb-4">{bonus.headline}</h3>
+            <p className="text-base sm:text-lg text-[#3A2A1A] leading-relaxed">{bonus.description}</p>
           </div>
         </div>
       ))}
@@ -226,16 +226,16 @@ const testimonials = [
 ];
 
 const Testimonial: React.FC = () => (
-  <section className="px-4 sm:px-6 py-8 sm:py-10 bg-creme-papel">
-    <h2 className="text-2xl sm:text-3xl font-bold text-verde-musgo mb-8 text-center">A Transformação é Real</h2>
+  <section className="px-4 sm:px-6 py-8 sm:py-10 bg-[#FBF6EE]">
+    <h2 className="text-2xl sm:text-3xl font-bold text-[#3A2A1A] mb-8 text-center">A Transformação é Real</h2>
     <div className="max-w-2xl mx-auto space-y-8">
       {testimonials.map((testimonial, index) => (
-        <div key={index} className="bg-rosa-aquarela p-6 rounded-lg shadow-md border border-terracota/10">
-          <p className="italic text-base sm:text-lg text-verde-musgo relative">
-            <span className="text-4xl sm:text-5xl text-terracota opacity-20 absolute -top-2 -left-2 sm:-top-4 sm:-left-4 font-serif">“</span>
+        <div key={index} className="bg-[#F4C97A] p-6 rounded-lg shadow-md border border-[#9C3D1A]/10">
+          <p className="italic text-base sm:text-lg text-[#3A2A1A] relative">
+            <span className="text-4xl sm:text-5xl text-[#9C3D1A] opacity-20 absolute -top-2 -left-2 sm:-top-4 sm:-left-4 font-serif">“</span>
             {testimonial.quote}
           </p>
-          <p className="font-semibold text-right mt-4 text-terracota">- {testimonial.author}</p>
+          <p className="font-semibold text-right mt-4 text-[#9C3D1A]">- {testimonial.author}</p>
         </div>
       ))}
     </div>
@@ -243,17 +243,17 @@ const Testimonial: React.FC = () => (
 );
 
 const WhoAmI: React.FC = () => (
-  <section className="px-4 sm:px-6 py-8 sm:py-10 bg-creme-papel">
-    <h2 className="text-2xl sm:text-3xl font-bold text-verde-musgo mb-8 text-center">Uma Ferramenta Criada por Alguém que Entende</h2>
+  <section className="px-4 sm:px-6 py-8 sm:py-10 bg-[#FBF6EE]">
+    <h2 className="text-2xl sm:text-3xl font-bold text-[#3A2A1A] mb-8 text-center">Uma Ferramenta Criada por Alguém que Entende</h2>
     <div className="flex flex-col md:flex-row items-center gap-8">
       <div className="md:w-1/3 flex justify-center">
         <img 
           src="/images/creator/profile.jpg" 
           alt="Mariana Costa, educadora TDAH e criadora do Planner Sem Caos." 
-          className="rounded-full w-40 h-40 object-cover shadow-lg border-4 border-rosa-aquarela"
+          className="rounded-full w-40 h-40 object-cover shadow-lg border-4 border-[#F4C97A]"
         />
       </div>
-      <div className="md:w-2/3 text-center md:text-left text-verde-musgo">
+      <div className="md:w-2/3 text-center md:text-left text-[#3A2A1A]">
         <p className="text-base sm:text-lg mb-4">
           "Olá! Eu sou a Juliana, educadora especializada em TDAH. Por anos, minha mesa era um mar de post-its e cadernos pela metade. Como uma adulta com TDAH, a organização tradicional nunca funcionou para mim. Era frustrante e me fazia sentir inadequada."
         </p>
@@ -263,7 +263,7 @@ const WhoAmI: React.FC = () => (
         <p className="text-base sm:text-lg">
           "Criei o <strong>Planner Sem Caos</strong> porque precisava de uma ferramenta que se adaptasse ao meu cérebro, e não o contrário. Minha esperança é que ele te ajude a encontrar a mesma clareza e controle que ele me trouxe."
         </p>
-        <p className="font-semibold text-right mt-4 text-terracota">- Juliana C.</p>
+        <p className="font-semibold text-right mt-4 text-[#9C3D1A]">- Juliana C.</p>
       </div>
     </div>
   </section>
@@ -273,21 +273,21 @@ const WhoAmI: React.FC = () => (
 
 // Validity notice with clean, subtle styling and micro-interaction
 const ValidityNotice: React.FC = () => (
-  <div className="inline-flex items-center justify-center gap-2 bg-creme-papel border border-terracota/20 rounded-md p-3 shadow-sm mx-auto">
-    <svg className="w-4 h-4 text-terracota animate-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <div className="inline-flex items-center justify-center gap-2 bg-[#FBF6EE] border border-[#9C3D1A]/20 rounded-md p-3 shadow-sm mx-auto">
+    <svg className="w-4 h-4 text-[#9C3D1A] animate-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
       <circle cx="12" cy="12" r="9" strokeWidth="2" />
       <path d="M12 7v5l3 3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
-    <span className="text-xs font-bold text-terracota tracking-wide uppercase">BÔNUS LIMITADO</span>
-    <span className="text-xs text-verde-musgo/60">Válido até hoje às 23h59</span>
+    <span className="text-xs font-bold text-[#9C3D1A] tracking-wide uppercase">BÔNUS LIMITADO</span>
+    <span className="text-xs text-[#3A2A1A]/60">Válido até hoje às 23h59</span>
   </div>
 );
 
 
 const Pricing: React.FC = () => (
-  <section id="pricing" className="text-verde-musgo text-center px-4 sm:px-6 py-10 sm:py-12 bg-creme-papel">
-    <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-verde-musgo">Adquira Seu Planner 👇</h2>
-    <div className="mt-2 mb-8 text-base sm:text-lg max-w-lg mx-auto space-y-4 text-verde-musgo/80">
+  <section id="pricing" className="text-[#3A2A1A] text-center px-4 sm:px-6 py-10 sm:py-12 bg-[#FBF6EE]">
+    <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-[#3A2A1A]">Adquira Seu Planner 👇</h2>
+    <div className="mt-2 mb-8 text-base sm:text-lg max-w-lg mx-auto space-y-4 text-[#3A2A1A]/80">
       <p>Faltam poucos meses pra virada do ano…</p>
       <p>e você ainda sente que está perdido?</p>
       <p>Rotina bagunçada, planos que não saem do papel, foco que vai e volta…</p>
@@ -298,18 +298,18 @@ const Pricing: React.FC = () => (
     
     <div className="flex justify-center max-w-md mx-auto">
       {/* Plano Premium */}
-      <div className="bg-rosa-aquarela text-verde-musgo rounded-lg shadow-xl p-8 border-2 border-terracota relative w-full">
-        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-terracota text-white px-4 py-1 rounded-full text-sm font-bold">
+      <div className="bg-[#F4C97A] text-[#3A2A1A] rounded-lg shadow-xl p-8 border-2 border-[#9C3D1A] relative w-full">
+        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-[#9C3D1A] text-white px-4 py-1 rounded-full text-sm font-bold">
           MAIS POPULAR
         </div>
         
         {/* Limited Time Badge */}
-        <div className="absolute -top-3 -right-3 bg-terracota text-white px-3 py-1 rounded-full text-xs font-bold transform rotate-12">
+        <div className="absolute -top-3 -right-3 bg-[#9C3D1A] text-white px-3 py-1 rounded-full text-xs font-bold transform rotate-12">
           65% OFF
         </div>
         
         
-        <p className="text-lg mb-2 text-verde-musgo/80">Pagamento único. Sem assinaturas.</p>
+        <p className="text-lg mb-2 text-[#3A2A1A]/80">Pagamento único. Sem assinaturas.</p>
           <img 
             src="/images/cover/capa-nova.jpg" 
             alt="Capa do eBook Planner Sem Caos"
@@ -320,16 +320,16 @@ const Pricing: React.FC = () => (
 
         
         <div className="my-6">
-          <span className="text-2xl font-semibold line-through text-verde-musgo/40">R$ 98,00</span>
-          <span className="text-4xl sm:text-5xl font-black text-verde-musgo ml-2">R$ 37<span className="text-2xl sm:text-3xl align-top">,00</span></span>
+          <span className="text-2xl font-semibold line-through text-[#3A2A1A]/40">R$ 98,00</span>
+          <span className="text-4xl sm:text-5xl font-black text-[#3A2A1A] ml-2">R$ 37<span className="text-2xl sm:text-3xl align-top">,00</span></span>
         </div>
-        <p className="text-sm text-verde-musgo/60 -mt-4 mb-4">Planner com mais de 170 páginas</p>
+        <p className="text-sm text-[#3A2A1A]/60 -mt-4 mb-4">Planner com mais de 170 páginas</p>
 
-        <div className="bg-creme-papel border border-terracota rounded-lg p-4 mb-6 shadow-sm">
-          <p className="text-xs font-bold tracking-wide uppercase text-terracota mb-2">
+        <div className="bg-[#FBF6EE] border border-[#9C3D1A] rounded-lg p-4 mb-6 shadow-sm">
+          <p className="text-xs font-bold tracking-wide uppercase text-[#9C3D1A] mb-2">
             Oferta especial por tempo limitado
           </p>
-          <p className="text-base sm:text-lg font-bold text-verde-musgo leading-tight">
+          <p className="text-base sm:text-lg font-bold text-[#3A2A1A] leading-tight">
             Garanta o Planner Sem Caos e leve a nova versão 2.0 de graça.
           </p>
           <div className="my-4 flex flex-col items-center">
@@ -339,49 +339,49 @@ const Pricing: React.FC = () => (
               className="w-full max-w-[220px] block"
               loading="lazy"
             />
-            <p className="mt-3 text-lg font-bold text-verde-musgo/50 line-through">
+            <p className="mt-3 text-lg font-bold text-[#3A2A1A]/50 line-through">
               R$ 97,00
             </p>
-            <span className="inline-block text-terracota text-sm font-bold tracking-[0.2em] uppercase border-b-2 border-terracota pb-1 mt-3">
+            <span className="inline-block text-[#9C3D1A] text-sm font-bold tracking-[0.2em] uppercase border-b-2 border-[#9C3D1A] pb-1 mt-3">
               Lançamento
             </span>
           </div>
-          <p className="text-sm text-verde-musgo/70 mt-2">
+          <p className="text-sm text-[#3A2A1A]/70 mt-2">
             Essa condição promocional pode sair do ar a qualquer momento.
           </p>
         </div>
         
 
         <ul className="space-y-3 text-left mb-6">
-          <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0" /><span>Acesse e preencha de onde quiser, no celular, tablet ou computador</span></li>
-          <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0" /><span>Planner em PDF para Impressão</span></li>
-          <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0" /><span>Layouts Flexíveis e Não Datados</span></li>
-          <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0" /><span>+170 Maneiras de fazer as coisas acontecerem</span></li>
-          <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0" /><span>Imprima quantas vezes quiser</span></li>
-          <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0" /><span>Atualizações grátis para sempre</span></li>
+          <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-[#E07B39] flex-shrink-0" /><span>Acesse e preencha de onde quiser, no celular, tablet ou computador</span></li>
+          <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-[#E07B39] flex-shrink-0" /><span>Planner em PDF para Impressão</span></li>
+          <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-[#E07B39] flex-shrink-0" /><span>Layouts Flexíveis e Não Datados</span></li>
+          <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-[#E07B39] flex-shrink-0" /><span>+170 Maneiras de fazer as coisas acontecerem</span></li>
+          <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-[#E07B39] flex-shrink-0" /><span>Imprima quantas vezes quiser</span></li>
+          <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-[#E07B39] flex-shrink-0" /><span>Atualizações grátis para sempre</span></li>
         </ul>
         
-        <div className="bg-creme-papel border border-terracota/20 rounded-lg p-4 mb-6 shadow-inner">
-          <h4 className="text-lg font-bold text-terracota mb-3 text-center">🎁 BÔNUS INCLUSOS</h4>
+        <div className="bg-[#FBF6EE] border border-[#9C3D1A]/20 rounded-lg p-4 mb-6 shadow-inner">
+          <h4 className="text-lg font-bold text-[#9C3D1A] mb-3 text-center">🎁 BÔNUS INCLUSOS</h4>
           <ul className="space-y-2 text-sm text-left">
              <li className="flex items-center">
-               <CheckIcon className="w-4 h-4 mr-2 text-dourado flex-shrink-0" />
+               <CheckIcon className="w-4 h-4 mr-2 text-[#E07B39] flex-shrink-0" />
                <span>Exercícios Prontos para Explorar o TDAH</span>
              </li>
              <li className="flex items-center">
-               <CheckIcon className="w-4 h-4 mr-2 text-dourado flex-shrink-0" />
+               <CheckIcon className="w-4 h-4 mr-2 text-[#E07B39] flex-shrink-0" />
                <span>O Segredo Escondido Dentro de Você</span>
              </li>
              <li className="flex items-center">
-               <CheckIcon className="w-4 h-4 mr-2 text-dourado flex-shrink-0" />
+               <CheckIcon className="w-4 h-4 mr-2 text-[#E07B39] flex-shrink-0" />
                <span>Organize, Respire e Brilhe: Checklist de Limpeza</span>
              </li>
              <li className="flex items-center">
-               <CheckIcon className="w-4 h-4 mr-2 text-dourado flex-shrink-0" />
+               <CheckIcon className="w-4 h-4 mr-2 text-[#E07B39] flex-shrink-0" />
                <span>Coleção Premium de Exercícios Emocionais</span>
              </li>
              <li className="flex items-center">
-               <CheckIcon className="w-4 h-4 mr-2 text-dourado flex-shrink-0" />
+               <CheckIcon className="w-4 h-4 mr-2 text-[#E07B39] flex-shrink-0" />
                <span>Do Caos à Consciência: Diário de Sintomas</span>
              </li>
            </ul>
@@ -478,15 +478,15 @@ const Pricing: React.FC = () => (
           })()}
           target="_blank"
           rel="noopener noreferrer"
-          className="block bg-terracota text-white font-bold text-lg uppercase w-full py-4 px-6 rounded-md shadow-lg transform hover:scale-105 hover:bg-pessego-suave transition-all duration-300 ease-in-out animate-pulse"
+          className="block bg-[#9C3D1A] text-white font-bold text-lg uppercase w-full py-4 px-6 rounded-md shadow-lg transform hover:scale-105 hover:bg-[#F0D4B0] transition-all duration-300 ease-in-out animate-pulse"
         >
           GARANTIR MEU PLANNER
         </a>
         
         {/* Risk Reversal */}
         <div className="mt-4 text-center">
-          <p className="text-xs text-verde-musgo/60">🛡️ Garantia de 30 dias ou seu dinheiro de volta</p>
-          <p className="text-xs text-verde-musgo/40 mt-1">Compra 100% segura e protegida</p>
+          <p className="text-xs text-[#3A2A1A]/60">🛡️ Garantia de 30 dias ou seu dinheiro de volta</p>
+          <p className="text-xs text-[#3A2A1A]/40 mt-1">Compra 100% segura e protegida</p>
         </div>
       </div>
     </div>
@@ -494,48 +494,48 @@ const Pricing: React.FC = () => (
 );
 
 const FAQ: React.FC = () => (
-  <section className="px-4 sm:px-6 py-8 sm:py-10 bg-rosa-aquarela">
-    <h2 className="text-2xl sm:text-3xl font-bold text-verde-musgo mb-8 text-center">
+  <section className="px-4 sm:px-6 py-8 sm:py-10 bg-[#F4C97A]">
+    <h2 className="text-2xl sm:text-3xl font-bold text-[#3A2A1A] mb-8 text-center">
       Perguntas Frequentes
     </h2>
     <div className="max-w-2xl mx-auto space-y-6 text-left">
       <div>
-        <h3 className="font-semibold text-base sm:text-lg text-terracota">
+        <h3 className="font-semibold text-base sm:text-lg text-[#9C3D1A]">
           Como funciona o planner?
         </h3>
-        <p className="mt-1 text-sm sm:text-base text-verde-musgo/80">
+        <p className="mt-1 text-sm sm:text-base text-[#3A2A1A]/80">
           Você receberá um arquivo PDF de alta qualidade no tamanho A4 e A5 pronto para ser impresso em casa ou em uma gráfica. Você pode imprimir as páginas que precisar, quantas vezes quiser. Recomendamos imprimir em papel de gramatura média a alta para maior durabilidade.
         </p>
       </div>
-      <div className="border-t border-terracota/10 pt-6">
-        <h3 className="font-semibold text-base sm:text-lg text-terracota">
+      <div className="border-t border-[#9C3D1A]/10 pt-6">
+        <h3 className="font-semibold text-base sm:text-lg text-[#9C3D1A]">
           É um pagamento único ou uma assinatura?
         </h3>
-        <p className="mt-1 text-sm sm:text-base text-verde-musgo/80">
+        <p className="mt-1 text-sm sm:text-base text-[#3A2A1A]/80">
           É um pagamento 100% único! Você compra uma vez e tem acesso vitalício ao planner e a todas as futuras atualizações, sem nenhuma taxa recorrente.
         </p>
       </div>
-      <div className="border-t border-terracota/10 pt-6">
-        <h3 className="font-semibold text-base sm:text-lg text-terracota">
+      <div className="border-t border-[#9C3D1A]/10 pt-6">
+        <h3 className="font-semibold text-base sm:text-lg text-[#9C3D1A]">
           Como receberei o planner após a compra?
         </h3>
-        <p className="mt-1 text-sm sm:text-base text-verde-musgo/80">
+        <p className="mt-1 text-sm sm:text-base text-[#3A2A1A]/80">
           Imediatamente após a confirmação do pagamento, você receberá um e-mail com um link para baixar seu planner em PDF. O processo é instantâneo.
         </p>
       </div>
-      <div className="border-t border-terracota/10 pt-6">
-        <h3 className="font-semibold text-base sm:text-lg text-terracota">
+      <div className="border-t border-[#9C3D1A]/10 pt-6">
+        <h3 className="font-semibold text-base sm:text-lg text-[#9C3D1A]">
           E se não funcionar para mim?
         </h3>
-        <p className="mt-1 text-sm sm:text-base text-verde-musgo/80">
+        <p className="mt-1 text-sm sm:text-base text-[#3A2A1A]/80">
           Temos uma garantia de satisfação de 30 dias. Se você sentir que o planner não atendeu às suas expectativas, basta nos contatar dentro de 30 dias para um reembolso total, sem complicações.
         </p>
       </div>
-      <div className="border-t border-terracota/10 pt-6">
-        <h3 className="font-semibold text-base sm:text-lg text-terracota">
+      <div className="border-t border-[#9C3D1A]/10 pt-6">
+        <h3 className="font-semibold text-base sm:text-lg text-[#9C3D1A]">
           Preciso ter diagnóstico de TDAH para usar?
         </h3>
-        <p className="mt-1 text-sm sm:text-base text-verde-musgo/80">
+        <p className="mt-1 text-sm sm:text-base text-[#3A2A1A]/80">
           Não, o planner foi desenvolvido para ajudar qualquer pessoa que se identifique com os desafios do TDAH, mesmo sem diagnóstico formal. As estratégias são úteis para qualquer pessoa que busca melhorar seu foco e organização.
         </p>
       </div>
@@ -545,7 +545,7 @@ const FAQ: React.FC = () => (
 
 
 const Footer: React.FC = () => (
-  <footer className="bg-verde-musgo text-creme-papel text-center px-4 sm:px-6 py-8 border-t border-terracota/20">
+  <footer className="bg-[#3A2A1A] text-[#FBF6EE] text-center px-4 sm:px-6 py-8 border-t border-[#9C3D1A]/20">
     <p className="font-bold text-xl tracking-tight">Planner Sem Caos</p>
     <p className="text-sm mt-2 opacity-70">
       &copy; {new Date().getFullYear()} Planner Sem Caos. Todos os Direitos Reservados.
@@ -554,20 +554,20 @@ const Footer: React.FC = () => (
       Investi anos de trabalho na pesquisa e design deste planner com a minha equipe. Por favor, respeite os criadores e apoie o trabalho original.
     </p>
     <div className="text-xs mt-6 opacity-60 space-x-6">
-      <a href="#" className="hover:text-rosa-aquarela transition-colors">Termos de Serviço</a>
-      <a href="#" className="hover:text-rosa-aquarela transition-colors">Política de Privacidade</a>
+      <a href="#" className="hover:text-[#F4C97A] transition-colors">Termos de Serviço</a>
+      <a href="#" className="hover:text-[#F4C97A] transition-colors">Política de Privacidade</a>
     </div>
   </footer>
 );
 
 
 
-function App() {
+function AppAntigo() {
   return (
-    <div className="min-h-screen bg-creme-papel font-sans text-verde-musgo antialiased">
+    <div className="min-h-screen bg-[#FBF6EE] font-sans text-[#3A2A1A] antialiased">
       <Header />
-      <main className="max-w-screen-md mx-auto shadow-2xl bg-creme-papel">
-        <div className="bg-creme-papel">
+      <main className="max-w-screen-md mx-auto shadow-2xl bg-[#FBF6EE]">
+        <div className="bg-[#FBF6EE]">
           <Hero />
           <ScienceBasedSection />
 
@@ -577,7 +577,7 @@ function App() {
           <Pricing />
           <Bonus />
         </div>
-        <div className="bg-creme-papel">
+        <div className="bg-[#FBF6EE]">
           <Testimonial />
 
           <WhoAmI />
@@ -588,7 +588,7 @@ function App() {
         <Pricing />
         <Footer />
       </main>
-      <div className="text-center text-xs text-verde-musgo/30 py-4">&nbsp;</div>
+      <div className="text-center text-xs text-[#3A2A1A]/30 py-4">&nbsp;</div>
       
       <Analytics />
     </div>
@@ -597,4 +597,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppAntigo;

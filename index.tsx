@@ -1,7 +1,8 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
+import AppAntigo from './AppAntigo';
+import AppVazia from './AppVazia';
 import AppES from './AppES';
 import AppRemarketing from './AppRemarketing';
 import Members from './Members';
@@ -24,7 +25,8 @@ root.render(
     <HashRouter>
       <PixelManager />
       <Routes>
-        <Route path="/" element={<App />} />
+        <Route path="/" element={<AppAntigo />} />
+        <Route path="/vazia" element={<AppVazia />} />
         <Route path="/es" element={<AppES />} />
         <Route path="/remarketing" element={<AppRemarketing />} />
         <Route path="/members" element={<Members />} />

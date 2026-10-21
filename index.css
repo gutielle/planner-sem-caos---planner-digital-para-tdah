@@ -33,3 +33,187 @@
     animation: none;
   }
 }
+
+/* ============================================================
+   DS-01 · Editorial Minimal (origem: time.fyi)
+   ============================================================ */
+:root{
+  color-scheme: light;
+  --font-sans:"Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:"Geist Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --ink:#141414; --ink-70:rgba(20,20,20,.70); --ink-60:rgba(20,20,20,.60); --ink-55:rgba(20,20,20,.55);
+  --ink-45:rgba(20,20,20,.45); --ink-40:rgba(20,20,20,.40); --ink-30:rgba(20,20,20,.30);
+  --ink-15:rgba(20,20,20,.15); --ink-12:rgba(20,20,20,.12); --ink-08:rgba(20,20,20,.08);
+  --ink-06:rgba(20,20,20,.06); --ink-05:rgba(20,20,20,.05);
+  --bg:#FFFFFF; --on-ink:#FFFFFF; --ink-hover:#2A2A2A;
+  --blue:#3B7BE8;   --blue-tint:#DFE9FB;   --blue-text:#1F4A94;   --blue-panel:#EEF3FC;
+  --green:#2E9B5F;  --green-tint:#DFF2E6;  --green-text:#1D5E3A;  --green-panel:#EEF6F0;
+  --coral:#E8604C;  --coral-tint:#FDE3DD;  --coral-text:#8C2F20;  --coral-panel:#FCEFEA;
+  --purple:#7A5AE0; --purple-tint:#EBE4FB; --purple-text:#4A3294; --purple-panel:#F4F0FC;
+  --amber:#D98B1A;  --amber-tint:#FBEFD9;  --amber-text:#7A4B08;  --amber-panel:#FCF6EA;
+  --dot-r:#FF5F57; --dot-y:#FEBC2E; --dot-g:#28C840;
+  --r-sm:3px; --r-md:8px; --r-lg:12px; --r-xl:16px; --r-pill:9999px;
+  --hairline:1px solid var(--ink-08);
+  --shadow-card:0 0 0 1px var(--ink-06), 0 8px 24px -12px rgba(20,20,20,.25);
+  --shadow-sm:0 0 0 1px var(--ink-06), 0 6px 16px -10px rgba(20,20,20,.30);
+  --shadow-lg:0 0 0 1px var(--ink-06), 0 16px 32px -16px rgba(20,20,20,.30);
+  --shadow-key:0 0 0 1px var(--ink-12), 0 2px 0 0 var(--ink-12);
+  --ease:cubic-bezier(.2,.8,.2,1);
+}
+
+.ds01 { font-family: var(--font-sans); }
+.ds01 .mono { font-family: var(--font-mono); }
+.ds01 .clay { filter: drop-shadow(0 3px 4px rgba(20,20,20,.10)); }
+
+@keyframes dsSlideIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.ds-slide-in { animation: dsSlideIn .22s var(--ease) both; }
+
+@keyframes dsCaret {
+  0%, 49%   { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+.ds-caret { animation: dsCaret 1s steps(1) infinite; }
+
+@keyframes dsProgress {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+.ds-progress { transform-origin: left; animation: dsProgress 6.5s linear both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .ds-slide-in, .ds-caret, .ds-progress { animation: none; }
+}
+
+/* ============================================================
+   SEC-01 · Feedbacks · Mural com marca-texto
+   ============================================================ */
+:root{
+  --fb-display:"Fraunces", "Recoleta", "Cooper", Georgia, serif;
+  --fb-ui:"Inter", "Manrope", system-ui, sans-serif;
+  --fb-quote:system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --fb-ink:#111111;
+  --fb-quote-color:#374151;
+  --fb-star:#FBBF24;
+  --fb-highlight:rgba(255,205,54,.25);
+  --fb-avatar-bg:rgba(128,128,128,.14);
+  --fb-divider:#D9D9D9;
+  --fb-bg:#FFFFFF;
+  --fb-r-mark:4px; --fb-r-avatar:9999px;
+}
+
+.fb-section {
+  background: var(--fb-bg);
+  padding-top: 64px;
+  padding-bottom: 80px;
+  border-bottom: 1px solid var(--fb-divider);
+}
+
+.fb-title {
+  font-family: var(--fb-display);
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-transform: lowercase;
+  color: var(--fb-ink);
+  text-align: center;
+}
+
+.fb-subtitle {
+  font-family: var(--fb-ui);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 26px;
+  color: var(--fb-quote-color);
+  text-align: center;
+  max-width: 560px;
+  margin: 16px auto 0;
+}
+
+.fb-wall { columns: 2 308px; column-gap: 48px; }
+.fb-wall > * { break-inside: avoid; margin-bottom: 48px; }
+
+.fb-item { text-align: center; animation: fbFadeIn .25s ease both; }
+
+.fb-stars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  margin-bottom: 8px;
+  color: var(--fb-star);
+}
+
+.fb-quote {
+  font-family: var(--fb-quote);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--fb-quote-color);
+  overflow-wrap: break-word;
+  margin-bottom: 8px;
+}
+
+.fb-q { font-weight: 700; opacity: .5; }
+
+.fb-mark {
+  background: var(--fb-highlight);
+  padding: 0 2px;
+  border-radius: var(--fb-r-mark);
+  box-decoration-break: slice;
+  -webkit-box-decoration-break: slice;
+  color: inherit;
+}
+
+.fb-author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.fb-avatar {
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  border-radius: var(--fb-r-avatar);
+  background: var(--fb-avatar-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--fb-ui);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--fb-quote-color);
+  object-fit: cover;
+}
+
+.fb-name {
+  font-family: var(--fb-ui);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: rgba(55, 65, 81, .9);
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@keyframes fbFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@media (max-width: 767px) {
+  .fb-wall { columns: 1; }
+  .fb-title { font-size: 32px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fb-item { animation: none; }
+}

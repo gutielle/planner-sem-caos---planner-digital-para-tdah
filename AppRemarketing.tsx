@@ -49,11 +49,11 @@ const Hero: React.FC = () => {
         </p>
       </div>
       <div className="mt-8 px-4 sm:px-6">
-        <div className="max-w-2xl mx-auto aspect-[2667/2000]">
+        <div className="max-w-md mx-auto aspect-[1728/2304]">
           <img
-            src="/images/planner/hero-pt.jpg"
+            src="/images/cover/capa-mockup-novo.jpg"
             alt="Capa do Planner Sem Caos - ferramenta de organização para TDAH"
-            className="w-full h-full object-cover rounded-xl shadow-xl border-4 border-black"
+            className="w-full h-full object-contain"
           />
         </div>
       </div>
@@ -77,59 +77,159 @@ const Hero: React.FC = () => {
   );
   };
 
-const ScienceBasedSection: React.FC = () => (
-  <section className="px-4 sm:px-6 py-12 sm:py-16 bg-rosa-aquarela">
-    <div className="max-w-4xl mx-auto text-center">
-      <h2 className="text-3xl sm:text-4xl font-bold text-verde-musgo mb-6">
-        Nossos planners são modernos e baseados em ciência
-      </h2>
-      <p className="text-lg text-verde-musgo/80 mb-8 max-w-3xl mx-auto leading-relaxed">
-        Descubra como funciona o seu cérebro com TDAH, com páginas que explicam hábitos inconscientes e neurobiologia, além de dicas de leitura para se aprofundar
-      </p>
-      <div className="max-w-md mx-auto mb-8">
-        <img 
-          src="/images/planner/respiracao-caixa.jpg" 
-          alt="Páginas do planner mostrando conteúdo baseado em ciência sobre TDAH"
-          className="w-full h-auto rounded-lg shadow-md"
-        />
-      </div>
-      <p className="text-lg text-verde-musgo/80 mb-8 max-w-3xl mx-auto leading-relaxed">
-        Modelos inéditos para TDAH que eu criei, como a Flor de Lótus do Hiperfoco, a Regra de Poupança 10&10, o Planner de Foco para Ligações, o Carrinho de Compras de 24 Horas, o Checklist de Compras por Impulso, o Planejamento DIV/CON, as Pétalas do Poder da Produtividade e muito mais!
-      </p>
-      <div className="max-w-md mx-auto mb-8">
-         <img 
-           src="/images/planner/metas.jpg" 
-           alt="Páginas do planner mostrando modelos únicos criados para TDAH"
-           className="w-full h-auto rounded-lg shadow-md"
-         />
-       </div>
-       <p className="text-lg text-verde-musgo/80 mb-8 max-w-3xl mx-auto leading-relaxed">
-         Dicas, conselhos e coaching para te ajudar a focar nos seus pontos fortes e criar hábitos e rotinas que cuidem de você e funcionem junto com o seu cérebro, em vez de contra ele.
-       </p>
-       <div className="max-w-md mx-auto mb-8">
-          <img 
-            src="/images/planner/compras.jpg" 
-            alt="Páginas do planner com dicas e coaching para TDAH"
-            className="w-full h-auto rounded-lg shadow-md"
-          />
-        </div>
-        <p className="text-lg text-verde-musgo/80 mb-8 max-w-3xl mx-auto leading-relaxed">
-          Design e estrutura únicos que te dão total flexibilidade para personalizar o planner totalmente para a sua vida, rotina e trabalho.
-        </p>
-        <div className="max-w-md mx-auto">
-          <img 
-            src="/images/planner/priorizar.jpg" 
-            alt="Páginas do planner mostrando design flexível e personalizável"
-            className="w-full h-auto rounded-lg shadow-md"
-          />
-        </div>
+const ScienceBasedSection: React.FC = () => {
+  const steps = [
+    {
+      title: 'Baseado em ciência',
+      text: 'Descubra como funciona o seu cérebro com TDAH, com páginas que explicam hábitos inconscientes e neurobiologia, além de dicas de leitura para se aprofundar',
+    },
+    {
+      title: 'Modelos inéditos',
+      text: 'Modelos inéditos para TDAH que eu criei, como a Flor de Lótus do Hiperfoco, a Regra de Poupança 10&10, o Planner de Foco para Ligações, o Carrinho de Compras de 24 Horas, o Checklist de Compras por Impulso, o Planejamento DIV/CON, as Pétalas do Poder da Produtividade e muito mais!',
+    },
+    {
+      title: 'Coaching e foco',
+      text: 'Dicas, conselhos e coaching para te ajudar a focar nos seus pontos fortes e criar hábitos e rotinas que cuidem de você e funcionem junto com o seu cérebro, em vez de contra ele.',
+    },
+    {
+      title: 'Design flexível',
+      text: 'Design e estrutura únicos que te dão total flexibilidade para personalizar o planner totalmente para a sua vida, rotina e trabalho.',
+    },
+  ];
+
+  return (
+    <section className="px-4 sm:px-6 py-12 sm:py-16 bg-rosa-aquarela">
+      <div className="max-w-3xl mx-auto">
+        <h2 className="text-3xl sm:text-4xl font-bold text-verde-musgo mb-10 text-center">
+          Nossos planners são modernos e baseados em ciência
+        </h2>
+        <ol>
+          {steps.map((step, index) => (
+            <li key={index} className="flex gap-4 sm:gap-6">
+              <div className="flex flex-col items-center">
+                <span className="flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-terracota text-white font-bold text-base sm:text-lg shadow-md shrink-0">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                {index < steps.length - 1 && (
+                  <span className="flex-1 w-0.5 bg-terracota/20 my-2" aria-hidden="true" />
+                )}
+              </div>
+              <div className={index < steps.length - 1 ? 'pb-8 sm:pb-10' : ''}>
+                <h3 className="text-xl sm:text-2xl font-bold text-verde-musgo mb-2">
+                  {step.title}
+                </h3>
+                <p className="text-base sm:text-lg text-verde-musgo/80 leading-relaxed">
+                  {step.text}
+                </p>
+              </div>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   );
+};
 
 
 
 
+
+const PlannerInsideSection: React.FC = () => {
+  const pages = [
+    '/images/nova-versao/versao01.jpg',
+    '/images/nova-versao/versao02.jpg',
+    '/images/nova-versao/versao03.jpg',
+    '/images/nova-versao/versao04.jpg',
+    '/images/nova-versao/versao05.jpg',
+    '/images/nova-versao/versao06.jpg',
+    '/images/nova-versao/versao07.jpg',
+    '/images/nova-versao/versao08.jpg',
+    '/images/nova-versao/versao09.jpg',
+    '/images/nova-versao/versao10.jpg',
+    '/images/nova-versao/versao11.jpg',
+    '/images/nova-versao/versao12.jpg',
+  ];
+
+  const trackRef = React.useRef<HTMLDivElement>(null);
+  const [canScrollPrev, setCanScrollPrev] = React.useState(false);
+  const [canScrollNext, setCanScrollNext] = React.useState(true);
+
+  const updateArrows = () => {
+    const el = trackRef.current;
+    if (!el) return;
+    setCanScrollPrev(el.scrollLeft > 4);
+    setCanScrollNext(el.scrollLeft + el.clientWidth < el.scrollWidth - 4);
+  };
+
+  React.useEffect(() => {
+    const el = trackRef.current;
+    if (!el) return;
+    updateArrows();
+    el.addEventListener('scroll', updateArrows, { passive: true });
+    window.addEventListener('resize', updateArrows);
+    return () => {
+      el.removeEventListener('scroll', updateArrows);
+      window.removeEventListener('resize', updateArrows);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const scrollByCard = (direction: number) => {
+    const el = trackRef.current;
+    if (!el) return;
+    const card = el.firstElementChild as HTMLElement | null;
+    const amount = card ? card.clientWidth + 24 : el.clientWidth * 0.8;
+    el.scrollBy({ left: direction * amount, behavior: 'smooth' });
+  };
+
+  const arrowClass = 'absolute top-1/2 -translate-y-1/2 z-10 flex items-center justify-center w-11 h-11 rounded-full bg-white text-verde-musgo shadow-md border border-verde-musgo/10 transition hover:bg-verde-musgo hover:text-white disabled:opacity-30 disabled:pointer-events-none';
+
+  return (
+    <section className="px-4 sm:px-6 py-12 sm:py-16 bg-creme-papel">
+      <h2 className="text-3xl sm:text-4xl font-bold text-verde-musgo mb-4 text-center">
+        Veja o Planner por Dentro
+      </h2>
+      <p className="text-lg text-verde-musgo/80 mb-10 max-w-3xl mx-auto text-center leading-relaxed">
+        Uma prévia de algumas páginas que você vai receber, tudo pensado para funcionar com o seu cérebro.
+      </p>
+      <div className="relative max-w-5xl mx-auto">
+        <button
+          type="button"
+          onClick={() => scrollByCard(-1)}
+          disabled={!canScrollPrev}
+          aria-label="Páginas anteriores"
+          className={`${arrowClass} left-1 sm:-left-5`}
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" /></svg>
+        </button>
+        <div
+          ref={trackRef}
+          className="hide-scrollbar flex gap-5 sm:gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory py-1"
+        >
+          {pages.map((image, index) => (
+            <div key={image} className="snap-start shrink-0 w-[72%] sm:w-[46%] md:w-[31%]">
+              <img
+                src={image}
+                alt={`Página ${index + 1} do Planner Sem Caos`}
+                className="w-full h-auto rounded-lg shadow-md"
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
+        <button
+          type="button"
+          onClick={() => scrollByCard(1)}
+          disabled={!canScrollNext}
+          aria-label="Próximas páginas"
+          className={`${arrowClass} right-1 sm:-right-5`}
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
+        </button>
+      </div>
+    </section>
+  );
+};
 
 const Features: React.FC = () => (
     <section className="px-4 sm:px-6 py-8 sm:py-10 bg-creme-papel">
@@ -163,74 +263,6 @@ const Features: React.FC = () => (
         </div>
       </div>
     </section>
-);
-
-const bonusItems = [
-  {
-    headline: "Exercícios Prontos para Explorar o TDAH",
-    description: "Este guia foi criado para guiar você em exercícios e atividades que ajudam a explorar o TDAH de forma mais profunda, promovendo autoconhecimento, organização e crescimento pessoal.",
-    image: "/images/bonus/capa-sintomas.jpg",
-    aspectRatio: "1414/2000", // portrait
-    pages: "+26 Páginas"
-  },
-  {
-    headline: "O Segredo Escondido Dentro de Você",
-    description: "Esse guia visual ajuda a identificar sentimentos escondidos, entender melhor as próprias emoções e dar os primeiros passos rumo ao autoconhecimento e bem-estar.",
-    image: "/images/bonus/mental.jpg",
-    aspectRatio: "1545/2000", // portrait
-    pages: "+29 Páginas"
-  },
-  {
-    headline: "Organize, Respire e Brilhe: Checklist de Limpeza",
-    description: "Esse checklist vai deixar sua rotina de limpeza mais organizada, leve e eficiente, economizando tempo e mantendo sua casa impecável.",
-    image: "/images/bonus/cleaning-checklist.jpg",
-    aspectRatio: "2000/1414", // landscape
-    pages: "+3 Páginas"
-  },
-  {
-    headline: "Coleção Premium de Exercícios Emocionais",
-    description: "Esse workbook é um companheiro de jornada, ajudando você a desenvolver mais autoconsciência, aceitação e bem-estar emocional.",
-    image: "/images/bonus/emotions-workbook.jpg",
-    aspectRatio: "2000/1414", // landscape
-    pages: "+10 Páginas"
-  },
-  {
-    headline: "Do Caos à Consciência: Diário de Sintomas",
-    description: "Com ele, você poderá preencher diariamente seus sintomas e, ao final do mês, ter uma visão clara do seu progresso e dos pontos que merecem mais atenção.",
-    image: "/images/bonus/medicamentos.jpg",
-    aspectRatio: "2000/1414", // landscape
-    pages: "+5 Páginas"
-  }
-];
-
-const Bonus: React.FC = () => (
-  <section className="px-4 sm:px-6 py-8 sm:py-10 bg-rosa-aquarela">
-    <h2 className="text-2xl sm:text-3xl font-bold text-verde-musgo mb-8 text-center">Bônus Exclusivos Inclusos</h2>
-    <div className="space-y-8">
-      {bonusItems.map((bonus, index) => (
-        <div key={index} className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-6 md:gap-8`}>
-          <div className="md:w-1/2">
-            <div className={`rounded-lg overflow-hidden shadow-lg`} style={{ aspectRatio: bonus.aspectRatio }}>
-              <img
-                src={bonus.image}
-                alt={`Imagem ilustrativa do bônus: ${bonus.headline}`}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="mt-3 flex justify-center">
-              <span className="bg-terracota text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
-                {bonus.pages}
-              </span>
-            </div>
-          </div>
-          <div className="md:w-1/2 text-center md:text-left">
-            <h3 className="text-xl sm:text-2xl font-bold text-terracota mb-4">{bonus.headline}</h3>
-            <p className="text-base sm:text-lg text-verde-musgo leading-relaxed">{bonus.description}</p>
-          </div>
-        </div>
-      ))}
-    </div>
-  </section>
 );
 
 const testimonials = [
@@ -334,7 +366,7 @@ const Pricing: React.FC = () => (
         
         <p className="text-lg mb-2 text-verde-musgo/80">Pagamento único. Sem assinaturas.</p>
           <img 
-            src="/images/cover/capa-nova.jpg" 
+            src="/images/cover/imagem-oferta.jpg" 
             alt="Capa do eBook Planner Sem Caos"
             className="w-full max-w-[240px] mx-auto my-4 block pricing-cover-animate"
             loading="lazy"
@@ -358,37 +390,6 @@ const Pricing: React.FC = () => (
           <li className="flex items-center"><CheckIcon className="w-5 h-5 mr-2 text-dourado flex-shrink-0" /><span>Atualizações grátis para sempre</span></li>
         </ul>
         
-        <div className="bg-creme-papel border border-terracota/20 rounded-lg p-4 mb-6 shadow-inner">
-          <h4 className="text-lg font-bold text-terracota mb-3 text-center">🎁 BÔNUS INCLUSOS</h4>
-          <ul className="space-y-2 text-sm text-left">
-             <li className="flex items-center">
-               <CheckIcon className="w-4 h-4 mr-2 text-dourado flex-shrink-0" />
-               <span>Exercícios Prontos para Explorar o TDAH</span>
-             </li>
-             <li className="flex items-center">
-               <CheckIcon className="w-4 h-4 mr-2 text-dourado flex-shrink-0" />
-               <span>O Segredo Escondido Dentro de Você</span>
-             </li>
-             <li className="flex items-center">
-               <CheckIcon className="w-4 h-4 mr-2 text-dourado flex-shrink-0" />
-               <span>Organize, Respire e Brilhe: Checklist de Limpeza</span>
-             </li>
-             <li className="flex items-center">
-               <CheckIcon className="w-4 h-4 mr-2 text-dourado flex-shrink-0" />
-               <span>Coleção Premium de Exercícios Emocionais</span>
-             </li>
-             <li className="flex items-center">
-               <CheckIcon className="w-4 h-4 mr-2 text-dourado flex-shrink-0" />
-               <span>Do Caos à Consciência: Diário de Sintomas</span>
-             </li>
-           </ul>
-           
-           {/* Validity Notice */}
-           <div className="mt-4 text-center">
-             <ValidityNotice />
-           </div>
-        </div>
-
         <a 
           href={(function() {
             const base = "https://pay.hotmart.com/G105627121L?off=jr9dagv7&checkoutMode=10";
@@ -562,17 +563,19 @@ const Footer: React.FC = () => (
 function AppRemarketing() {
   return (
     <div className="min-h-screen bg-creme-papel font-sans text-verde-musgo antialiased">
-      <Header />
+      <div className="bg-terracota text-white text-center text-xs sm:text-sm font-semibold tracking-wide py-2 px-4">
+        Escolhido por +10.912 pessoas com TDAH
+      </div>
       <main className="max-w-screen-md mx-auto shadow-2xl bg-creme-papel">
         <div className="bg-creme-papel">
           <Hero />
           <ScienceBasedSection />
+          <PlannerInsideSection />
 
       <Features />
 
 
           <Pricing />
-          <Bonus />
         </div>
         <div className="bg-creme-papel">
           <Testimonial />
