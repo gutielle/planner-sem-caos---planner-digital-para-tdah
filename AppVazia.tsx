@@ -346,7 +346,7 @@ const Hero: React.FC = () => (
       />
     </div>
 
-    <div className={`mt-[40px] pt-[24px] border-t ${HAIR}`}>
+    <div className={`mt-[28px] pt-[24px] border-t ${HAIR}`}>
       <p className={`mono text-[11px] uppercase tracking-[0.06em] ${C.ink40} text-center`}>Esta página é pra você se:</p>
       <div className="mt-[16px] mx-auto max-w-[880px] grid gap-[12px] sm:gap-[24px] sm:grid-cols-3">
         {[
