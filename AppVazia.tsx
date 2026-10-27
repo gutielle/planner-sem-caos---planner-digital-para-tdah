@@ -4,7 +4,7 @@ import { Analytics } from '@vercel/analytics/react';
 // ============================================================
 // Checkout (link Hotmart atual, com repasse de UTMs/SCK)
 // ============================================================
-const CHECKOUT_BASE = 'https://pay.hotmart.com/C108132426O?checkoutMode=10';
+const CHECKOUT_BASE = 'https://pay.hotmart.com/C108132426O?checkoutMode=10&bid=1793068812650';
 
 function buildCheckoutUrl(): string {
   if (typeof window === 'undefined') return CHECKOUT_BASE;
